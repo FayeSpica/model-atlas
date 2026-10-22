@@ -2,3 +2,5 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
 .flow-mobile{display:none}@media(max-width:640px){.flow-svg{display:none}.flow-mobile{display:flex;flex-wrap:wrap;gap:8px;padding:16px}.flow-mobile button{background:#f6f8fa;border:1px solid var(--line);padding:10px;font-size:12px;text-align:left;flex:1 1 40%}.flow-mobile button span{color:var(--muted);margin-right:8px}.flow-mobile button[aria-pressed=true]{border-color:var(--gold);background:#f7f0e4}}
+
+.figure-downloads{display:flex;gap:20px;flex-wrap:wrap}

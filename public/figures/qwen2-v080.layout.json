@@ -1,0 +1,1162 @@
+{
+  "width": 1400,
+  "height": 1600,
+  "background": "#ffffff",
+  "font": "Inter, Arial, sans-serif",
+  "nodes": [
+    {
+      "id": "title",
+      "kind": "text",
+      "x": 30,
+      "y": 10,
+      "w": 1340,
+      "h": 55,
+      "label": "Qwen2 · vLLM v0.8.0",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#232b31",
+      "size": 32,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "scope",
+      "kind": "text",
+      "x": 30,
+      "y": 65,
+      "w": 1340,
+      "h": 40,
+      "label": "Qwen2ForCausalLM · TP=1 shapes · N tokens / D hidden / F intermediate / V vocabulary",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "overview",
+      "kind": "text",
+      "x": 30,
+      "y": 120,
+      "w": 1340,
+      "h": 38,
+      "label": "01  Model path — forward, compute_logits and sample are separate calls",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#232b31",
+      "size": 21,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "ids",
+      "kind": "card",
+      "x": 30,
+      "y": 180,
+      "w": 240,
+      "h": 70,
+      "label": "input_ids\n[N]",
+      "fill": "#f7f8f9",
+      "stroke": "#c8cdd1",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "embed",
+      "kind": "card",
+      "x": 305,
+      "y": 180,
+      "w": 240,
+      "h": 70,
+      "label": "VocabParallelEmbedding\n[N, D]",
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "layers",
+      "kind": "card",
+      "x": 580,
+      "y": 180,
+      "w": 240,
+      "h": 70,
+      "label": "L × Qwen2DecoderLayer\nhidden_states + residual",
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "norm",
+      "kind": "card",
+      "x": 855,
+      "y": 180,
+      "w": 240,
+      "h": 70,
+      "label": "Final RMSNorm\nadd pending residual",
+      "fill": "#f7f8f9",
+      "stroke": "#c8cdd1",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "hidden",
+      "kind": "card",
+      "x": 1130,
+      "y": 180,
+      "w": 240,
+      "h": 70,
+      "label": "forward() returns\n[N, D] hidden states",
+      "fill": "#eef3eb",
+      "stroke": "#a0b797",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "lm",
+      "kind": "card",
+      "x": 1130,
+      "y": 290,
+      "w": 240,
+      "h": 65,
+      "label": "compute_logits()\nLM head → [N_selected, V]",
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "sample",
+      "kind": "card",
+      "x": 855,
+      "y": 290,
+      "w": 240,
+      "h": 65,
+      "label": "sample()\nSampler → next token",
+      "fill": "#eef3eb",
+      "stroke": "#a0b797",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "globalnote",
+      "kind": "text",
+      "x": 30,
+      "y": 280,
+      "w": 780,
+      "h": 80,
+      "label": "L, D, F, Hq and Hkv come from Qwen2Config.\nLM head shares embedding weights only if tie_word_embeddings=True.\ninputs_embeds bypasses embedding lookup; generation loop is outside this file.",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "layerheading",
+      "kind": "text",
+      "x": 30,
+      "y": 395,
+      "w": 650,
+      "h": 50,
+      "label": "02  Decoder layer — fused residual + RMSNorm",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#232b31",
+      "size": 21,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "attnheading",
+      "kind": "text",
+      "x": 730,
+      "y": 395,
+      "w": 640,
+      "h": 50,
+      "label": "03  Qwen2Attention — QKV → RoPE → attention",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#232b31",
+      "size": 21,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "pair",
+      "kind": "card",
+      "x": 170,
+      "y": 465,
+      "w": 420,
+      "h": 65,
+      "label": "Input pair: hidden_states h, residual r\nBoth [N, D] when r exists",
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "inorm",
+      "kind": "card",
+      "x": 170,
+      "y": 575,
+      "w": 420,
+      "h": 100,
+      "label": "input_layernorm\nr = h if r is None, else r + h\na = RMSNorm(r)",
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "attention",
+      "kind": "card",
+      "x": 170,
+      "y": 725,
+      "w": 420,
+      "h": 65,
+      "label": "self_attn(positions, a)\nattention output o: [N, D]",
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "postnorm",
+      "kind": "card",
+      "x": 170,
+      "y": 840,
+      "w": 420,
+      "h": 90,
+      "label": "post_attention_layernorm(o, r)\nr = r + o\nm = RMSNorm(r)",
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "mlp",
+      "kind": "card",
+      "x": 170,
+      "y": 980,
+      "w": 420,
+      "h": 65,
+      "label": "Qwen2MLP(m)\nu = down_proj(SiLU(gate) ⊙ up)",
+      "fill": "#eef3eb",
+      "stroke": "#a0b797",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "return",
+      "kind": "card",
+      "x": 170,
+      "y": 1095,
+      "w": 420,
+      "h": 75,
+      "label": "Return (u, r) — still two tensors\nMLP residual add occurs at next layer norm\nor at the final model norm",
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "qkv",
+      "kind": "card",
+      "x": 790,
+      "y": 465,
+      "w": 520,
+      "h": 65,
+      "label": "qkv_proj · QKVParallelLinear · bias=True\n[N, (Hq + 2Hkv) × d]",
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "q",
+      "kind": "card",
+      "x": 760,
+      "y": 585,
+      "w": 170,
+      "h": 60,
+      "label": "Q\n[N, Hq × d]",
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "k",
+      "kind": "card",
+      "x": 960,
+      "y": 585,
+      "w": 170,
+      "h": 60,
+      "label": "K\n[N, Hkv × d]",
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "v",
+      "kind": "card",
+      "x": 1160,
+      "y": 585,
+      "w": 170,
+      "h": 60,
+      "label": "V\n[N, Hkv × d]",
+      "fill": "#eef3eb",
+      "stroke": "#a0b797",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "rope",
+      "kind": "card",
+      "x": 790,
+      "y": 700,
+      "w": 340,
+      "h": 65,
+      "label": "rotary_emb(positions, q, k)\nRoPE on Q and K only",
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "kernel",
+      "kind": "card",
+      "x": 790,
+      "y": 835,
+      "w": 340,
+      "h": 85,
+      "label": "Attention(q, k, v)\nDefault: causal · scale = d^(-1/2)\nGQA when Hkv < Hq",
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "cache",
+      "kind": "card",
+      "x": 1170,
+      "y": 985,
+      "w": 200,
+      "h": 80,
+      "label": "Per-layer KV cache\n+ attention metadata\nbackend-managed",
+      "fill": "#eef3eb",
+      "stroke": "#a0b797",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "outproj",
+      "kind": "card",
+      "x": 790,
+      "y": 985,
+      "w": 340,
+      "h": 65,
+      "label": "o_proj · RowParallelLinear\n[N, Hq × d] → [N, D] · no bias",
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "attnnotes",
+      "kind": "text",
+      "x": 730,
+      "y": 1090,
+      "w": 640,
+      "h": 100,
+      "label": "d = D / Hq; no Q/K RMSNorm in this implementation.\nTP shards Q heads; KV heads are sharded or replicated.\nKV cache is not an explicit Qwen2Attention.forward argument.\nis_causal=False selects ENCODER_ONLY attention instead.",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "mlpheading",
+      "kind": "text",
+      "x": 30,
+      "y": 1220,
+      "w": 1340,
+      "h": 45,
+      "label": "04  Qwen2MLP — fused gate/up projection, dense SwiGLU",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#232b31",
+      "size": 21,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "mlpin",
+      "kind": "card",
+      "x": 30,
+      "y": 1300,
+      "w": 200,
+      "h": 65,
+      "label": "m\n[N, D]",
+      "fill": "#f7f8f9",
+      "stroke": "#c8cdd1",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "gateup",
+      "kind": "card",
+      "x": 290,
+      "y": 1300,
+      "w": 310,
+      "h": 65,
+      "label": "gate_up_proj · no bias\nMergedColumnParallelLinear",
+      "fill": "#eef3eb",
+      "stroke": "#a0b797",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "gate",
+      "kind": "card",
+      "x": 670,
+      "y": 1270,
+      "w": 240,
+      "h": 60,
+      "label": "gate: [N, F]\nlinear projection",
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "up",
+      "kind": "card",
+      "x": 670,
+      "y": 1370,
+      "w": 240,
+      "h": 60,
+      "label": "up: [N, F]\nidentity",
+      "fill": "#eef3eb",
+      "stroke": "#a0b797",
+      "color": "#232b31",
+      "size": 16,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "multiply",
+      "kind": "card",
+      "x": 980,
+      "y": 1300,
+      "w": 160,
+      "h": 100,
+      "label": "SiluAndMul\nSiLU(gate) ⊙ up\n[N, F]",
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "down",
+      "kind": "card",
+      "x": 1200,
+      "y": 1300,
+      "w": 170,
+      "h": 100,
+      "label": "down_proj\nRowParallelLinear\n[N, D] · no bias",
+      "fill": "#eef3eb",
+      "stroke": "#a0b797",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 700,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "footer",
+      "kind": "text",
+      "x": 30,
+      "y": 1470,
+      "w": 1340,
+      "h": 100,
+      "label": "N = tokens processed in this call (vLLM flattened token layout), not a fixed batch × sequence tensor.\nShapes above are logical TP=1 shapes. PP ranks pass hidden_states and residual between layer partitions.\nSource: vllm/model_executor/models/qwen2.py @ v0.8.0; RMSNorm and Attention internals checked at the same version.\nEmbedding-model pooling path is excluded from this causal-LM diagram.",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#232b31",
+      "size": 15,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "ids",
+      "target": "embed",
+      "points": [
+        [
+          270,
+          215
+        ],
+        [
+          305,
+          215
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "embed",
+      "target": "layers",
+      "points": [
+        [
+          545,
+          215
+        ],
+        [
+          580,
+          215
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "layers",
+      "target": "norm",
+      "points": [
+        [
+          820,
+          215
+        ],
+        [
+          855,
+          215
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "norm",
+      "target": "hidden",
+      "points": [
+        [
+          1095,
+          215
+        ],
+        [
+          1130,
+          215
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "hidden",
+      "target": "lm",
+      "points": [
+        [
+          1250,
+          250
+        ],
+        [
+          1250,
+          290
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "lm",
+      "target": "sample",
+      "points": [
+        [
+          1130,
+          322
+        ],
+        [
+          1095,
+          322
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "pair",
+      "target": "inorm",
+      "points": [
+        [
+          380,
+          530
+        ],
+        [
+          380,
+          575
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "inorm",
+      "target": "attention",
+      "points": [
+        [
+          380,
+          675
+        ],
+        [
+          380,
+          725
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "attention",
+      "target": "postnorm",
+      "points": [
+        [
+          380,
+          790
+        ],
+        [
+          380,
+          840
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "postnorm",
+      "target": "mlp",
+      "points": [
+        [
+          380,
+          930
+        ],
+        [
+          380,
+          980
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "mlp",
+      "target": "return",
+      "points": [
+        [
+          380,
+          1045
+        ],
+        [
+          380,
+          1095
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "inorm",
+      "target": "postnorm",
+      "points": [
+        [
+          170,
+          625
+        ],
+        [
+          80,
+          625
+        ],
+        [
+          80,
+          885
+        ],
+        [
+          170,
+          885
+        ]
+      ],
+      "label": "r",
+      "label_x": 96,
+      "label_y": 745,
+      "color": "#b5873a"
+    },
+    {
+      "source": "postnorm",
+      "target": "return",
+      "points": [
+        [
+          170,
+          885
+        ],
+        [
+          80,
+          885
+        ],
+        [
+          80,
+          1132
+        ],
+        [
+          170,
+          1132
+        ]
+      ],
+      "label": "r",
+      "label_x": 96,
+      "label_y": 1020,
+      "color": "#b5873a"
+    },
+    {
+      "source": "qkv",
+      "target": "q",
+      "points": [
+        [
+          850,
+          530
+        ],
+        [
+          850,
+          555
+        ],
+        [
+          845,
+          555
+        ],
+        [
+          845,
+          585
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "qkv",
+      "target": "k",
+      "points": [
+        [
+          1050,
+          530
+        ],
+        [
+          1050,
+          585
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "qkv",
+      "target": "v",
+      "points": [
+        [
+          1250,
+          530
+        ],
+        [
+          1250,
+          585
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "q",
+      "target": "rope",
+      "points": [
+        [
+          845,
+          645
+        ],
+        [
+          845,
+          700
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "k",
+      "target": "rope",
+      "points": [
+        [
+          1045,
+          645
+        ],
+        [
+          1045,
+          700
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "rope",
+      "target": "kernel",
+      "points": [
+        [
+          960,
+          765
+        ],
+        [
+          960,
+          835
+        ]
+      ],
+      "label": "Q′, K′",
+      "label_x": 1006,
+      "label_y": 803,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "v",
+      "target": "kernel",
+      "points": [
+        [
+          1245,
+          645
+        ],
+        [
+          1245,
+          815
+        ],
+        [
+          1080,
+          815
+        ],
+        [
+          1080,
+          835
+        ]
+      ],
+      "label": "V",
+      "label_x": 1272,
+      "label_y": 735,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "cache",
+      "target": "kernel",
+      "points": [
+        [
+          1170,
+          1025
+        ],
+        [
+          1150,
+          1025
+        ],
+        [
+          1150,
+          880
+        ],
+        [
+          1130,
+          880
+        ]
+      ],
+      "label": "read / write KV",
+      "label_x": 1260,
+      "label_y": 940,
+      "color": "#6a8a5e"
+    },
+    {
+      "source": "kernel",
+      "target": "outproj",
+      "points": [
+        [
+          960,
+          920
+        ],
+        [
+          960,
+          985
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "mlpin",
+      "target": "gateup",
+      "points": [
+        [
+          230,
+          1332
+        ],
+        [
+          290,
+          1332
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "gateup",
+      "target": "gate",
+      "points": [
+        [
+          600,
+          1320
+        ],
+        [
+          635,
+          1320
+        ],
+        [
+          635,
+          1300
+        ],
+        [
+          670,
+          1300
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "gateup",
+      "target": "up",
+      "points": [
+        [
+          600,
+          1345
+        ],
+        [
+          635,
+          1345
+        ],
+        [
+          635,
+          1400
+        ],
+        [
+          670,
+          1400
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "gate",
+      "target": "multiply",
+      "points": [
+        [
+          910,
+          1300
+        ],
+        [
+          950,
+          1300
+        ],
+        [
+          950,
+          1325
+        ],
+        [
+          980,
+          1325
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "up",
+      "target": "multiply",
+      "points": [
+        [
+          910,
+          1400
+        ],
+        [
+          950,
+          1400
+        ],
+        [
+          950,
+          1375
+        ],
+        [
+          980,
+          1375
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    },
+    {
+      "source": "multiply",
+      "target": "down",
+      "points": [
+        [
+          1140,
+          1350
+        ],
+        [
+          1200,
+          1350
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0,
+      "color": "#8f8a84"
+    }
+  ]
+}

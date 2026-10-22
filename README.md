@@ -24,6 +24,7 @@ npm run preview
 
 ## Content
 
+- Qwen2 (vLLM v0.8.0): source-specific decoder, QKV/RoPE, fused residual RMSNorm, and dense SwiGLU.
 - MiniMax-H3: joint audio/video diffusion, packed multimodal tokens and DiT details.
 - Qwen3-Omni: Thinker, Talker, code predictor and Code2Wav.
 - Decoder-only Transformer: an explicitly illustrative pre-norm / RoPE / SwiGLU baseline.
@@ -40,3 +41,5 @@ The workflow builds pull requests and deploys `main` with GitHub Actions. Reposi
 ## Provenance
 
 Model pages distinguish checkpoint defaults, implementation behavior and teaching schematics. Implementation URLs pin the inspected commit; the site does not claim untested performance. The H3 figure was authored for this project, with a restrained SVG visual style inspired by vLLM blog figures. No vLLM logo or affiliation is claimed. See CONTRIBUTING.md before adding content.
+
+Qwen2 diagram regeneration: run `python3 scripts/figures/qwen2.py`, then the arch-svg renderer on `public/figures/qwen2-v080.layout.json`. SVG, draw.io and JSON are published together.
