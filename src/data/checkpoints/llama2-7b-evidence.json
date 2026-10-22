@@ -1,0 +1,24 @@
+{
+  "model_id": "meta-llama/Llama-2-7b-hf",
+  "hf_revision": "01c7f73d771dfac7d292323805ebc428287df4f9",
+  "official_revision": "689c7f261b9c5514636ecc3c5fefefcbb3e6eed7",
+  "dimensions": {
+    "layers": 32,
+    "hidden": 4096,
+    "heads": 32,
+    "kv_heads": 32,
+    "head_dim": 128,
+    "ffn": 11008,
+    "vocab": 32000,
+    "context": 4096
+  },
+  "derivation": "FFN follows Meta FeedForward rounding: ceil(int(2*4*4096/3)/256)*256 = 11008. Vocab 32000 is consistent with the public F16 parameter count: P = L*(4*D^2+3*D*F+2*D)+D+2*V*D = 6738415616.",
+  "config_access": "Original gated config.json was not read; specifications use official source defaults and published model information.",
+  "metadata": {
+    "parameters": {
+      "F32": 2048,
+      "F16": 6738415616
+    },
+    "total": 6738417664
+  }
+}

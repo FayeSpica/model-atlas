@@ -1,4 +1,19 @@
 ---
-import Layout from '../../layouts/Layout.astro';import {concepts} from '../../data/catalog.mjs';const base=import.meta.env.BASE_URL.replace(/\/?$/, '/');
+import Layout from '../../layouts/Layout.astro';
+import { concepts } from '../../data/catalog.mjs';
+import groups from '../../data/concept-groups.mjs';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const catalog = new Map(concepts.map(c => [c.id, c]));
 ---
-<Layout title="基础概念"><section class="concept-index"><p class="eyebrow">基础概念</p><h1>先理解机制，再读模型。</h1><p class="intro">让同一个知识点，在不同结构中连起来。</p><div class="concept-links">{concepts.map(c=><a href={`${base}concepts/${c.id}/`}><strong>{c.name}</strong><span>{c.intro}</span><b>↗</b></a>)}</div></section></Layout>
+<Layout title="概念目录">
+  <section class="concept-index">
+    <h1>概念目录</h1>
+    <p class="intro">{concepts.length} 个概念 · 模型结构、生成方法与推理系统</p>
+    <a class="concept-map-entry" href={`${base}map/`}>AI Infra Lab <span>进入三维知识地图 ↗</span></a>
+    <nav class="concept-category-nav" aria-label="概念分类">{groups.map(group => <a href={`#${group.id}`}>{group.name}<span>{group.concepts.length}</span></a>)}</nav>
+    {groups.map(group => <section id={group.id} class="concept-category">
+      <header><h2>{group.name}<span>{group.concepts.length}</span></h2><p>{group.intro}</p></header>
+      <div class="concept-links">{group.concepts.map(id => catalog.get(id)).map(c => <a href={`${base}concepts/${c.id}/`}><strong>{c.name}</strong><span>{c.intro}</span><b>→</b></a>)}</div>
+    </section>)}
+  </section>
+</Layout>

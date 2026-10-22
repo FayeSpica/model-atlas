@@ -1,16 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {models,concepts} from '../data/catalog.mjs';
-const base=import.meta.env.BASE_URL.replace(/\/?$/, '/');
+import { RecipeCardGrid } from '../vendor/recipes/RecipeCardGrid.jsx';
+import { recipes } from '../lib/recipes-ui.jsx';
 ---
-<Layout title="看图理解模型">
-<section class="hero"><div><p class="eyebrow">模型结构图谱</p><h1>让模型的内部，<br/>变得看得见。</h1><p class="hero-copy">沿着数据走进模型。从输入到输出，逐层理解<br class="desktop"/>注意力、生成主干与多模态连接，再回到源码。</p><a class="primary" href={`${base}models/minimax-h3/`}>从 MiniMax-H3 开始 <span>↗</span></a></div><div class="hero-diagram" aria-label="文本、视频和音频进入联合 Transformer"><div class="media-row"><span>文本</span><span>视频</span><span>音频</span></div><div class="wires"><i></i><i></i><i></i></div><div class="hero-core"><span>Joint Transformer</span><div class="token-grid">{Array.from({length:36},(_,i)=><i class={`token-${i%3}`}></i>)}</div><small>不同模态，同一条数据流。</small></div><div class="output-wire"></div><div class="hero-output">理解结构，也理解连接。</div></div></section>
-<section class="catalog-section" id="models"><div class="section-heading"><div><p class="eyebrow">按模型探索</p><h2>选一个模型，拆开来看。</h2></div><span class="subtle">{models.length} 篇学习指南 · 持续补充</span></div><div class="catalog-tools"><div class="filter-buttons" aria-label="模型分类"><button class="selected" data-filter="全部" aria-pressed="true">全部模型</button>{['文本生成','视频与音频','理解与语音'].map(x=><button data-filter={x} aria-pressed="false">{x}</button>)}</div><label class="search"><span class="sr-only">搜索模型或概念</span><input type="search" placeholder="搜索模型、结构或概念" id="search"/></label></div>
-<div class="model-list">{models.map((m,i)=><a class="model-card" href={`${base}models/${m.slug}/`} data-category={m.category} data-search={`${m.name} ${m.family} ${m.category} ${m.kind} ${m.concepts.join(' ')}`.toLowerCase()}><div class="card-top"><span>{m.family}</span><span>{m.kind}</span></div><div class={`mini-diagram mini-${i}`} aria-hidden="true">{m.nodes.map((_,j)=><><i class={`tone-${j%3}`}></i>{j<4&&<b>→</b>}</>)}</div><h3>{m.name}</h3><p>{m.lead}</p><div class="tags">{m.concepts.slice(0,3).map(c=><span>{concepts.find(x=>x.id===c)?.name}</span>)}</div><div class="card-bottom">查看结构与数据流 <span>↗</span></div></a>)}</div><p id="empty" hidden>没有匹配的模型。试试 H3、attention 或文本生成。</p></section>
-<section class="concept-band"><div><p class="eyebrow">按概念学习</p><h2>把一个知识点，<br/>连到多个模型。</h2><p>先理解共同的机制，再辨认每个模型的选择。</p></div><div class="concept-links">{concepts.map(c=><a href={`${base}concepts/${c.id}/`}><strong>{c.name}</strong><span>{c.intro}</span><b>↗</b></a>)}</div></section>
-<section class="reading-note"><h2>图是入口，源码是依据。</h2><p>每篇内容注明适用范围与来源。把模型设计、checkpoint 参数和框架实现分开讲清楚；教学示意也会明确标注。</p></section>
+<Layout title="模型架构">
+  <div class="max-w-[1480px] mx-auto px-4 sm:px-6 py-8">
+    <header class="mb-6"><h1 class="text-2xl sm:text-3xl font-bold tracking-tight mb-2">Model Atlas</h1><p class="text-sm text-muted-foreground max-w-3xl">模型结构图、张量形状与源码解析。</p></header>
+    <RecipeCardGrid recipes={recipes} client:load />
+  </div>
 </Layout>
-<script>
-const search=document.querySelector<HTMLInputElement>('#search')!;let selected='全部';function filter(){let count=0;document.querySelectorAll<HTMLElement>('.model-card').forEach(card=>{const show=(selected==='全部'||card.dataset.category===selected)&&card.dataset.search!.includes(search.value.trim().toLowerCase());card.hidden=!show;if(show)count++});document.querySelector<HTMLElement>('#empty')!.hidden=count>0;}
-document.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach(button=>button.addEventListener('click',()=>{selected=button.dataset.filter!;document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',String(b===button))});filter()}));search.addEventListener('input',filter);
-</script>

@@ -1,27 +1,28 @@
 export default {
   "slug": "qwen2",
-  "name": "Qwen2",
+  "name": "Qwen2-7B-Instruct",
   "family": "Qwen",
   "category": "文本生成",
   "kind": "vLLM v0.8.0",
   "lead": "沿源码展开 QKV、RoPE、SwiGLU，以及融合 RMSNorm 的双状态残差流。",
   "concepts": [
+      "swiglu",
     "attention",
     "rope",
-    "kv-cache"
+    "kv-cache",
+    "gqa"
   ],
   "facts": [
-    "Dense decoder",
     "GQA / RoPE",
     "Fused residual + RMSNorm",
     "vLLM v0.8.0"
   ],
-  "scope": "仅画指定版本 qwen2.py 的 Qwen2ForCausalLM 路径；不假定具体 checkpoint 的层数和 head 数。默认 causal，省略 embedding-model pooling。图中张量为 TP=1 的逻辑形状。",
+  "scope": "权重规格为 Qwen/Qwen2-7B-Instruct；源码按 vLLM v0.8.0 的 Qwen2ForCausalLM 路径讲解。默认 causal，省略 embedding-model pooling。图中张量为 TP=1 的逻辑形状。",
   "revision": "966f933ee1cd7c9a41db60de5c7ff98657005251",
-  "figure": "qwen2-v080",
+  "figure": "qwen2-layer-stack",
   "figureTitle": "Qwen2 源码结构与双状态残差流",
-  "figureAlt": "Qwen2 整体模型、融合残差 Decoder Layer、QKV 与 RoPE Attention、SwiGLU MLP 的源码架构图",
-  "figureNote": "N 是本次调用处理的 token 数，D 是 hidden_size，F 是 intermediate_size；Hq / Hkv 分别是 query / KV head 数，d = D / Hq。L、D、F 和 head 数均由配置决定。",
+  "figureAlt": "Qwen2-7B-Instruct 的 28 层 Attention 和 FFN 分布，以及每层内部的 GQA、RoPE 和 dense SwiGLU 结构",
+  "figureNote": "该权重配置：L=28，D=3,584，F=18,944，Hq=28，Hkv=4，d=128。图中保留符号形状；N 是本次调用处理的 token 数。",
   "nodes": [
     [
       "词嵌入",
@@ -94,6 +95,14 @@ export default {
     [
       "Attention 的 context 与 KV cache",
       "https://github.com/vllm-project/vllm/blob/966f933ee1cd7c9a41db60de5c7ff98657005251/vllm/attention/layer.py"
+    ],
+    [
+      "权重配置与参数量（7,615,616,512）",
+      "https://huggingface.co/Qwen/Qwen2-7B-Instruct/tree/f2826a00ceef68f0f2b946d945ecc0477ce4450c"
     ]
-  ]
+  ],
+  "architecture": "dense",
+  "parameterCount": "7.62B",
+  "parameterTotal": 7615616512,
+  "modelId": "Qwen/Qwen2-7B-Instruct"
 };

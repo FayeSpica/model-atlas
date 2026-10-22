@@ -1,3 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {models,concepts} from '../src/data/catalog.mjs';
 test('catalog has unique routes and valid concept references',()=>{for(const entries of [models.map(m=>m.slug),concepts.map(c=>c.id)])assert.equal(new Set(entries).size,entries.length);for(const m of models){assert.equal(m.nodes.length,5);for(const c of m.concepts)assert(concepts.some(x=>x.id===c));for(const node of m.nodes)assert(node.length===4&&node.every(x=>typeof x==='string'&&x.length>0));assert(m.sources.every(([,url])=>new URL(url).protocol==='https:'));assert(m.sections.length>0);assert(m.question&&m.answer&&m.scope);}});
 test('implementation references pin the inspected revision',()=>{for(const m of models)for(const [,url] of m.sources)if(url.includes('vllm-project/vllm-omni'))assert(url.includes(`/blob/${m.revision}/`));});
+
+import groups from '../src/data/concept-groups.mjs';
+test('every concept has one category and valid related concepts',()=>{const ids=groups.flatMap(g=>g.concepts);assert.equal(new Set(ids).size,ids.length);assert.deepEqual([...ids].sort(),concepts.map(c=>c.id).sort());for(const c of concepts)for(const id of c.related||[])assert(concepts.some(x=>x.id===id),`${c.id}: ${id}`);});

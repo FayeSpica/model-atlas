@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ModelExplorer from '../components/model/ModelExplorer.jsx';
+const base=import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<Layout immersive title="Model Explorer" description="逐层探索 Qwen2、Qwen2.5-VL、Qwen3-TTS、Qwen3-Omni 与 MiniMax-H3 的三维张量结构。">
+  <ModelExplorer base={base} client:load />
+  <noscript><p style="padding:24px;color:white">模型浏览器需要 JavaScript。<a href={`${base}browse/`}>打开模型目录</a></p></noscript>
+</Layout>

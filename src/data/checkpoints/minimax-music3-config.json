@@ -1,0 +1,6 @@
+{
+  "architectures": [
+    "MiniMaxMusic3ForConditionalGeneration"
+  ],
+  "model_type": "minimax_music3"
+}

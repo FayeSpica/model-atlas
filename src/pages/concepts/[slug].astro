@@ -1,4 +1,36 @@
 ---
-import Layout from '../../layouts/Layout.astro';import {concepts,models} from '../../data/catalog.mjs';export function getStaticPaths(){return concepts.map(concept=>({params:{slug:concept.id},props:{concept}}));}const {concept:c}=Astro.props;const base=import.meta.env.BASE_URL.replace(/\/?$/, '/');
+import Layout from '../../layouts/Layout.astro';
+import groups from '../../data/concept-groups.mjs';
+import Architecture from '../../components/Architecture.astro';
+import { concepts, models } from '../../data/catalog.mjs';
+export function getStaticPaths() {
+  return concepts.map(concept => ({ params: { slug: concept.id }, props: { concept } }));
+}
+const { concept: c } = Astro.props;
+const category = groups.find(group => group.concepts.includes(c.id));
+const examples = models.filter(model => model.concepts.includes(c.id));
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const related = (c.related || []).map(id => concepts.find(concept => concept.id === id));
 ---
-<Layout title={c.name}><article class="concept-article"><a class="breadcrumb" href={`${base}concepts/`}>基础概念</a><h1>{c.name}</h1><p class="intro">{c.intro}</p><div class="formula"><code>{c.formula}</code></div><p>{c.body}</p><section class="exercise"><h2>{c.question}</h2><details><summary>展开参考答案</summary><p>{c.answer}</p></details></section><h2>在哪些模型里读到它？</h2><div class="related-models">{models.filter(m=>m.concepts.includes(c.id)).map(m=><a href={`${base}models/${m.slug}/`}><strong>{m.name}</strong><span>{m.lead}</span></a>)}</div><p class="subtle">此页为入门解释。具体公式变体、张量布局与实现范围，见各模型页的来源。</p></article></Layout>
+<Layout title={c.name}>
+  <article class="concept-article">
+    <a class="breadcrumb" href={`${base}concepts/`}>概念目录</a>
+    {category && <><span class="subtle"> / </span><a class="breadcrumb" href={`${base}concepts/#${category.id}`}>{category.name}</a></>}
+    <h1>{c.name}</h1>
+    <p class="intro">{c.intro}</p>
+    {c.papers?.length > 0 && <section class="concept-papers" aria-label="论文直达">
+      <h2>论文</h2>
+      {c.papers.map(([title, href]) => <a href={href} target="_blank" rel="noopener noreferrer"><span>{title}</span><span class="paper-id">arXiv:{href.split('/').pop()} ↗</span></a>)}
+    </section>}
+    {c.figure && <Architecture figure={c.figure} alt={c.figureAlt} />}
+    <div class="formula"><code>{c.formula}</code></div>
+    <p>{c.body}</p>
+    {(c.sections || []).map(([title, body]) => <section class="prose-section"><h2>{title}</h2><p>{body}</p></section>)}
+    <section class="exercise"><h2>{c.question}</h2><details><summary>展开参考答案</summary><p>{c.answer}</p></details></section>
+    {related.length > 0 && <section><h2>相关概念</h2><div class="related-models">{related.map(concept => <a href={`${base}concepts/${concept.id}/`}><strong>{concept.name}</strong><span>{concept.intro}</span></a>)}</div></section>}
+    {examples.length > 0 && <section><h2>模型实例与对比</h2>
+    <div class="related-models">{examples.map(model => <a href={`${base}models/${model.slug}/`}><strong>{model.name}</strong><span>{model.lead}</span></a>)}</div></section>}
+    {c.sources && <section class="source-box"><h2>来源</h2><ul>{c.sources.map(([label, href]) => <li><a href={href} target="_blank" rel="noopener noreferrer">{label} ↗</a></li>)}</ul></section>}
+    <p class="subtle">具体公式变体、张量布局与实现范围，见各模型页的来源。</p>
+  </article>
+</Layout>

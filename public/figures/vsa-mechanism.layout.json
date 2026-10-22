@@ -1,0 +1,664 @@
+{
+  "width": 1010,
+  "height": 905,
+  "background": "#ffffff",
+  "font": "Inter, Arial, sans-serif",
+  "nodes": [
+    {
+      "id": "title",
+      "kind": "text",
+      "x": 20,
+      "y": 10,
+      "w": 960,
+      "h": 30,
+      "label": "VSA-H3 \u00b7 TILE SELECTION + TOKEN ATTENTION",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "qkv",
+      "kind": "card",
+      "x": 340,
+      "y": 60,
+      "w": 300,
+      "h": 42,
+      "label": "Q / K / V after QK norm and RoPE",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "selection",
+      "kind": "text",
+      "x": 20,
+      "y": 127,
+      "w": 300,
+      "h": 24,
+      "label": "TILE SELECTION",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "fine",
+      "kind": "text",
+      "x": 350,
+      "y": 127,
+      "w": 300,
+      "h": 24,
+      "label": "FINE ATTENTION",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "compress",
+      "kind": "text",
+      "x": 680,
+      "y": 127,
+      "w": 300,
+      "h": 24,
+      "label": "COMPRESSION",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "poolqk",
+      "kind": "card",
+      "x": 20,
+      "y": 170,
+      "w": 300,
+      "h": 42,
+      "label": "Pool Q / K per tile",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "score",
+      "kind": "card",
+      "x": 20,
+      "y": 242,
+      "w": 300,
+      "h": 42,
+      "label": "Tile scores\nQ\u0304 K\u0304\u1d40 / \u221ad",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "topk",
+      "kind": "card",
+      "x": 20,
+      "y": 330,
+      "w": 300,
+      "h": 48,
+      "label": "Top-k per video region\nper query tile and head",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "mask",
+      "kind": "card",
+      "x": 20,
+      "y": 418,
+      "w": 300,
+      "h": 48,
+      "label": "Block mask\n+ non-video visibility rules",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "raw",
+      "kind": "card",
+      "x": 350,
+      "y": 170,
+      "w": 300,
+      "h": 42,
+      "label": "Original Q / K / V",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "sparse",
+      "kind": "card",
+      "x": 350,
+      "y": 500,
+      "w": 300,
+      "h": 48,
+      "label": "Block-sparse attention\nselected original tokens",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "poolv",
+      "kind": "card",
+      "x": 680,
+      "y": 170,
+      "w": 300,
+      "h": 42,
+      "label": "Pool V per tile",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "softmax",
+      "kind": "card",
+      "x": 680,
+      "y": 242,
+      "w": 300,
+      "h": 42,
+      "label": "Softmax over tile scores",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "coarse",
+      "kind": "card",
+      "x": 680,
+      "y": 330,
+      "w": 300,
+      "h": 48,
+      "label": "Matrix multiply\nsoftmax(S) \u00d7 V\u0304",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "broadcast",
+      "kind": "card",
+      "x": 680,
+      "y": 418,
+      "w": 300,
+      "h": 48,
+      "label": "Broadcast to tokens",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "hidden",
+      "kind": "card",
+      "x": 20,
+      "y": 540,
+      "w": 180,
+      "h": 42,
+      "label": "Input hidden states",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "gate",
+      "kind": "card",
+      "x": 20,
+      "y": 610,
+      "w": 180,
+      "h": 42,
+      "label": "to_gate_compress",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "mul",
+      "kind": "card",
+      "x": 815,
+      "y": 610,
+      "w": 30,
+      "h": 30,
+      "label": "\u00d7",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "shape": "ellipse"
+    },
+    {
+      "id": "sum",
+      "kind": "card",
+      "x": 485,
+      "y": 690,
+      "w": 30,
+      "h": 30,
+      "label": "+",
+      "fill": "#f7f5f2",
+      "stroke": "#aaa49c",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "shape": "ellipse"
+    },
+    {
+      "id": "out",
+      "kind": "card",
+      "x": 350,
+      "y": 755,
+      "w": 300,
+      "h": 42,
+      "label": "Restore packed token order",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "caption",
+      "kind": "text",
+      "x": 20,
+      "y": 825,
+      "w": 960,
+      "h": 60,
+      "label": "H3 implementation: O = O_sparse + gate \u2299 Broadcast(O_compressed).\nVideo queries select tiles; non-video queries stay dense. No sigmoid is added to this gate.",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "qkv",
+      "target": "poolqk",
+      "points": [
+        [
+          340,
+          81
+        ],
+        [
+          170,
+          81
+        ],
+        [
+          170,
+          170
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "qkv",
+      "target": "raw",
+      "points": [
+        [
+          490,
+          102
+        ],
+        [
+          490,
+          170
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "qkv",
+      "target": "poolv",
+      "points": [
+        [
+          640,
+          81
+        ],
+        [
+          830,
+          81
+        ],
+        [
+          830,
+          170
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "poolqk",
+      "target": "score",
+      "points": [
+        [
+          170,
+          212
+        ],
+        [
+          170,
+          242
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "score",
+      "target": "topk",
+      "points": [
+        [
+          170,
+          284
+        ],
+        [
+          170,
+          330
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "topk",
+      "target": "mask",
+      "points": [
+        [
+          170,
+          378
+        ],
+        [
+          170,
+          418
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "mask",
+      "target": "sparse",
+      "points": [
+        [
+          320,
+          442
+        ],
+        [
+          338,
+          442
+        ],
+        [
+          338,
+          524
+        ],
+        [
+          350,
+          524
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "raw",
+      "target": "sparse",
+      "points": [
+        [
+          500,
+          212
+        ],
+        [
+          500,
+          500
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "score",
+      "target": "softmax",
+      "points": [
+        [
+          320,
+          263
+        ],
+        [
+          680,
+          263
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "poolv",
+      "target": "coarse",
+      "points": [
+        [
+          980,
+          191
+        ],
+        [
+          992,
+          191
+        ],
+        [
+          992,
+          354
+        ],
+        [
+          980,
+          354
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "softmax",
+      "target": "coarse",
+      "points": [
+        [
+          830,
+          284
+        ],
+        [
+          830,
+          330
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "coarse",
+      "target": "broadcast",
+      "points": [
+        [
+          830,
+          378
+        ],
+        [
+          830,
+          418
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "broadcast",
+      "target": "mul",
+      "points": [
+        [
+          830,
+          466
+        ],
+        [
+          830,
+          610
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "hidden",
+      "target": "gate",
+      "points": [
+        [
+          110,
+          582
+        ],
+        [
+          110,
+          610
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "gate",
+      "target": "mul",
+      "points": [
+        [
+          200,
+          631
+        ],
+        [
+          815,
+          631
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "mul",
+      "target": "sum",
+      "points": [
+        [
+          830,
+          640
+        ],
+        [
+          830,
+          705
+        ],
+        [
+          515,
+          705
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "sparse",
+      "target": "sum",
+      "points": [
+        [
+          500,
+          548
+        ],
+        [
+          500,
+          690
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "sum",
+      "target": "out",
+      "points": [
+        [
+          500,
+          720
+        ],
+        [
+          500,
+          755
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    }
+  ]
+}

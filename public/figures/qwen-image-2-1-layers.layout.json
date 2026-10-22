@@ -1,0 +1,3655 @@
+{
+  "width": 1004,
+  "height": 1521,
+  "background": "#ffffff",
+  "font": "Inter, Arial, sans-serif",
+  "nodes": [
+    {
+      "id": "title",
+      "kind": "text",
+      "x": 20,
+      "y": 12,
+      "w": 964,
+      "h": 26,
+      "label": "QWEN-IMAGE-2.1",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 15,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "stack-label-0",
+      "kind": "text",
+      "x": 20,
+      "y": 54,
+      "w": 340,
+      "h": 22,
+      "label": "QWEN3-VL VISION \u00b7 27 LAYERS",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "stack-0-0",
+      "kind": "card",
+      "x": 370,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-0-0",
+      "kind": "text",
+      "x": 367,
+      "y": 76,
+      "w": 26,
+      "h": 16,
+      "label": "0",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-1",
+      "kind": "card",
+      "x": 392,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-2",
+      "kind": "card",
+      "x": 414,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-3",
+      "kind": "card",
+      "x": 436,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-4",
+      "kind": "card",
+      "x": 458,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-5",
+      "kind": "card",
+      "x": 480,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-6",
+      "kind": "card",
+      "x": 502,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-7",
+      "kind": "card",
+      "x": 524,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-0-7",
+      "kind": "text",
+      "x": 521,
+      "y": 76,
+      "w": 26,
+      "h": 16,
+      "label": "7",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-8",
+      "kind": "card",
+      "x": 546,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-9",
+      "kind": "card",
+      "x": 568,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-10",
+      "kind": "card",
+      "x": 590,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-11",
+      "kind": "card",
+      "x": 612,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-12",
+      "kind": "card",
+      "x": 634,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-13",
+      "kind": "card",
+      "x": 656,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-14",
+      "kind": "card",
+      "x": 678,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-15",
+      "kind": "card",
+      "x": 700,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-0-15",
+      "kind": "text",
+      "x": 697,
+      "y": 76,
+      "w": 26,
+      "h": 16,
+      "label": "15",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-16",
+      "kind": "card",
+      "x": 722,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-17",
+      "kind": "card",
+      "x": 744,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-18",
+      "kind": "card",
+      "x": 766,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-19",
+      "kind": "card",
+      "x": 788,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-20",
+      "kind": "card",
+      "x": 810,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-21",
+      "kind": "card",
+      "x": 832,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-22",
+      "kind": "card",
+      "x": 854,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-23",
+      "kind": "card",
+      "x": 876,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-0-23",
+      "kind": "text",
+      "x": 873,
+      "y": 76,
+      "w": 26,
+      "h": 16,
+      "label": "23",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-24",
+      "kind": "card",
+      "x": 898,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-25",
+      "kind": "card",
+      "x": 920,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-26",
+      "kind": "card",
+      "x": 942,
+      "y": 54,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-0-26",
+      "kind": "text",
+      "x": 939,
+      "y": 76,
+      "w": 26,
+      "h": 16,
+      "label": "26",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-label-1",
+      "kind": "text",
+      "x": 20,
+      "y": 102,
+      "w": 340,
+      "h": 22,
+      "label": "QWEN3-VL TEXT \u00b7 36 LAYERS",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "stack-1-0",
+      "kind": "card",
+      "x": 370.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-1-0",
+      "kind": "text",
+      "x": 367.0,
+      "y": 124,
+      "w": 20.666666666666668,
+      "h": 16,
+      "label": "0",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-1",
+      "kind": "card",
+      "x": 386.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-2",
+      "kind": "card",
+      "x": 403.3333333333333,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-3",
+      "kind": "card",
+      "x": 420.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-4",
+      "kind": "card",
+      "x": 436.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-5",
+      "kind": "card",
+      "x": 453.33333333333337,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-6",
+      "kind": "card",
+      "x": 470.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-7",
+      "kind": "card",
+      "x": 486.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-1-7",
+      "kind": "text",
+      "x": 483.6666666666667,
+      "y": 124,
+      "w": 20.666666666666668,
+      "h": 16,
+      "label": "7",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-8",
+      "kind": "card",
+      "x": 503.33333333333337,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-9",
+      "kind": "card",
+      "x": 520.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-10",
+      "kind": "card",
+      "x": 536.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-11",
+      "kind": "card",
+      "x": 553.3333333333334,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-12",
+      "kind": "card",
+      "x": 570.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-13",
+      "kind": "card",
+      "x": 586.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-14",
+      "kind": "card",
+      "x": 603.3333333333334,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-15",
+      "kind": "card",
+      "x": 620.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-1-15",
+      "kind": "text",
+      "x": 617.0,
+      "y": 124,
+      "w": 20.666666666666668,
+      "h": 16,
+      "label": "15",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-16",
+      "kind": "card",
+      "x": 636.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-17",
+      "kind": "card",
+      "x": 653.3333333333334,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-18",
+      "kind": "card",
+      "x": 670.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-19",
+      "kind": "card",
+      "x": 686.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-20",
+      "kind": "card",
+      "x": 703.3333333333334,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-21",
+      "kind": "card",
+      "x": 720.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-22",
+      "kind": "card",
+      "x": 736.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-23",
+      "kind": "card",
+      "x": 753.3333333333334,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-1-23",
+      "kind": "text",
+      "x": 750.3333333333334,
+      "y": 124,
+      "w": 20.666666666666668,
+      "h": 16,
+      "label": "23",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-24",
+      "kind": "card",
+      "x": 770.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-25",
+      "kind": "card",
+      "x": 786.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-26",
+      "kind": "card",
+      "x": 803.3333333333334,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-27",
+      "kind": "card",
+      "x": 820.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-28",
+      "kind": "card",
+      "x": 836.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-29",
+      "kind": "card",
+      "x": 853.3333333333334,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-30",
+      "kind": "card",
+      "x": 870.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-31",
+      "kind": "card",
+      "x": 886.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-1-31",
+      "kind": "text",
+      "x": 883.6666666666667,
+      "y": 124,
+      "w": 20.666666666666668,
+      "h": 16,
+      "label": "31",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-32",
+      "kind": "card",
+      "x": 903.3333333333334,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-33",
+      "kind": "card",
+      "x": 920.0,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-34",
+      "kind": "card",
+      "x": 936.6666666666667,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-35",
+      "kind": "card",
+      "x": 953.3333333333334,
+      "y": 102,
+      "w": 14.666666666666668,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-1-35",
+      "kind": "text",
+      "x": 950.3333333333334,
+      "y": 124,
+      "w": 20.666666666666668,
+      "h": 16,
+      "label": "35",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-label-2",
+      "kind": "text",
+      "x": 20,
+      "y": 150,
+      "w": 340,
+      "h": 22,
+      "label": "GENERATION DiT \u00b7 32 LAYERS",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "stack-2-0",
+      "kind": "card",
+      "x": 370.0,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-2-0",
+      "kind": "text",
+      "x": 367.0,
+      "y": 172,
+      "w": 22.75,
+      "h": 16,
+      "label": "0",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-1",
+      "kind": "card",
+      "x": 388.75,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-2",
+      "kind": "card",
+      "x": 407.5,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-3",
+      "kind": "card",
+      "x": 426.25,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-4",
+      "kind": "card",
+      "x": 445.0,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-5",
+      "kind": "card",
+      "x": 463.75,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-6",
+      "kind": "card",
+      "x": 482.5,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-7",
+      "kind": "card",
+      "x": 501.25,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-2-7",
+      "kind": "text",
+      "x": 498.25,
+      "y": 172,
+      "w": 22.75,
+      "h": 16,
+      "label": "7",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-8",
+      "kind": "card",
+      "x": 520.0,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-9",
+      "kind": "card",
+      "x": 538.75,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-10",
+      "kind": "card",
+      "x": 557.5,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-11",
+      "kind": "card",
+      "x": 576.25,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-12",
+      "kind": "card",
+      "x": 595.0,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-13",
+      "kind": "card",
+      "x": 613.75,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-14",
+      "kind": "card",
+      "x": 632.5,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-15",
+      "kind": "card",
+      "x": 651.25,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-2-15",
+      "kind": "text",
+      "x": 648.25,
+      "y": 172,
+      "w": 22.75,
+      "h": 16,
+      "label": "15",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-16",
+      "kind": "card",
+      "x": 670.0,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-17",
+      "kind": "card",
+      "x": 688.75,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-18",
+      "kind": "card",
+      "x": 707.5,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-19",
+      "kind": "card",
+      "x": 726.25,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-20",
+      "kind": "card",
+      "x": 745.0,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-21",
+      "kind": "card",
+      "x": 763.75,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-22",
+      "kind": "card",
+      "x": 782.5,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-23",
+      "kind": "card",
+      "x": 801.25,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-2-23",
+      "kind": "text",
+      "x": 798.25,
+      "y": 172,
+      "w": 22.75,
+      "h": 16,
+      "label": "23",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-24",
+      "kind": "card",
+      "x": 820.0,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-25",
+      "kind": "card",
+      "x": 838.75,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-26",
+      "kind": "card",
+      "x": 857.5,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-27",
+      "kind": "card",
+      "x": 876.25,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-28",
+      "kind": "card",
+      "x": 895.0,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-29",
+      "kind": "card",
+      "x": 913.75,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-30",
+      "kind": "card",
+      "x": 932.5,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-2-31",
+      "kind": "card",
+      "x": 951.25,
+      "y": 150,
+      "w": 16.75,
+      "h": 20,
+      "label": "",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-2-31",
+      "kind": "text",
+      "x": 948.25,
+      "y": 172,
+      "w": 22.75,
+      "h": 16,
+      "label": "31",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "path-label",
+      "kind": "text",
+      "x": 20,
+      "y": 198,
+      "w": 960,
+      "h": 20,
+      "label": "COMPONENT PATH \u00b7 STAGE BOUNDARIES MAY DIFFER",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "path-0",
+      "kind": "card",
+      "x": 20,
+      "y": 228,
+      "w": 176,
+      "h": 44,
+      "label": "\u6761\u4ef6\u7f16\u7801\nQwen3-VL",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "path-1",
+      "kind": "card",
+      "x": 216,
+      "y": 228,
+      "w": 176,
+      "h": 44,
+      "label": "\u53c2\u8003\u7f16\u7801\nVAE encoder",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "path-2",
+      "kind": "card",
+      "x": 412,
+      "y": 228,
+      "w": 176,
+      "h": 44,
+      "label": "\u8054\u5408\u751f\u6210\nDiT \u00b7 32 layers",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "path-3",
+      "kind": "card",
+      "x": 608,
+      "y": 228,
+      "w": 176,
+      "h": 44,
+      "label": "\u91c7\u6837\u66f4\u65b0\nEuler scheduler",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "path-4",
+      "kind": "card",
+      "x": 804,
+      "y": 228,
+      "w": 176,
+      "h": 44,
+      "label": "\u56fe\u50cf\u89e3\u7801\nVAE decoder",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "heading-0",
+      "kind": "text",
+      "x": 20,
+      "y": 300,
+      "w": 308,
+      "h": 25,
+      "label": "CONDITION \u00b7 PARALLEL ENCODERS",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-0-0-branch-0-0",
+      "kind": "card",
+      "x": 34,
+      "y": 345,
+      "w": 134.0,
+      "h": 40,
+      "label": "Vision encoder\n27 layers",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-0-branch-0-1",
+      "kind": "card",
+      "x": 34,
+      "y": 403,
+      "w": 134.0,
+      "h": 54,
+      "label": "Qwen3-VL text\nencoder\n36 layers",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-0-branch-0-2",
+      "kind": "card",
+      "x": 34,
+      "y": 475,
+      "w": 134.0,
+      "h": 36,
+      "label": "Text RMSNorm",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-0-branch-1-0",
+      "kind": "card",
+      "x": 180.0,
+      "y": 345,
+      "w": 134.0,
+      "h": 40,
+      "label": "Reference VAE\nencoder",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-0-branch-1-1",
+      "kind": "card",
+      "x": 180.0,
+      "y": 403,
+      "w": 134.0,
+      "h": 36,
+      "label": "Latent normalization",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-1",
+      "kind": "card",
+      "x": 34,
+      "y": 537,
+      "w": 280,
+      "h": 36,
+      "label": "Pack prefix + target",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "heading-1",
+      "kind": "text",
+      "x": 348,
+      "y": 300,
+      "w": 308,
+      "h": 25,
+      "label": "DiT \u00b7 REPRESENTATIVE BLOCK",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-1-0-input",
+      "kind": "text",
+      "x": 490.0,
+      "y": 345,
+      "w": 24,
+      "h": 18,
+      "label": "x",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-0",
+      "kind": "card",
+      "x": 362,
+      "y": 381,
+      "w": 280,
+      "h": 36,
+      "label": "LayerNorm",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-1",
+      "kind": "card",
+      "x": 362,
+      "y": 435,
+      "w": 280,
+      "h": 36,
+      "label": "Time-conditioned scale",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-2",
+      "kind": "card",
+      "x": 362,
+      "y": 489,
+      "w": 280,
+      "h": 40,
+      "label": "QKV projection\nQ 32 \u00d7 128 \u00b7 KV 32 \u00d7 128",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-3-branch-0-0",
+      "kind": "card",
+      "x": 362,
+      "y": 547,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "Q RMSNorm",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-3-branch-0-1",
+      "kind": "card",
+      "x": 362,
+      "y": 601,
+      "w": 85.33333333333333,
+      "h": 40,
+      "label": "Q 3-axis\nRoPE",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-3-branch-1-0",
+      "kind": "card",
+      "x": 459.3333333333333,
+      "y": 547,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "K RMSNorm",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-3-branch-1-1",
+      "kind": "card",
+      "x": 459.3333333333333,
+      "y": 601,
+      "w": 85.33333333333333,
+      "h": 40,
+      "label": "K 3-axis\nRoPE",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-3-branch-2-0",
+      "kind": "card",
+      "x": 556.6666666666666,
+      "y": 547,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "V",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-4",
+      "kind": "card",
+      "x": 362,
+      "y": 667,
+      "w": 280,
+      "h": 36,
+      "label": "Block-causal MHA",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-5",
+      "kind": "card",
+      "x": 362,
+      "y": 721,
+      "w": 280,
+      "h": 36,
+      "label": "o_proj",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-6",
+      "kind": "card",
+      "x": 362,
+      "y": 775,
+      "w": 280,
+      "h": 36,
+      "label": "Tanh residual gate",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-7",
+      "kind": "card",
+      "x": 488.0,
+      "y": 829,
+      "w": 28,
+      "h": 28,
+      "label": "\u00d7",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-1-8",
+      "kind": "card",
+      "x": 488.0,
+      "y": 875,
+      "w": 28,
+      "h": 28,
+      "label": "+",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-1-8-caption",
+      "kind": "text",
+      "x": 362,
+      "y": 880.0,
+      "w": 102.0,
+      "h": 18,
+      "label": "residual",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-1-9",
+      "kind": "card",
+      "x": 362,
+      "y": 921,
+      "w": 280,
+      "h": 36,
+      "label": "LayerNorm",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-10",
+      "kind": "card",
+      "x": 362,
+      "y": 975,
+      "w": 280,
+      "h": 36,
+      "label": "Time-conditioned scale",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-11",
+      "kind": "card",
+      "x": 362,
+      "y": 1029,
+      "w": 280,
+      "h": 40,
+      "label": "gate_up_proj\nfused linear \u00b7 d_ff 12,288",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-12-branch-0-0",
+      "kind": "card",
+      "x": 362,
+      "y": 1087,
+      "w": 134.0,
+      "h": 40,
+      "label": "SiLU\ngate",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-12-branch-1-0",
+      "kind": "card",
+      "x": 508.0,
+      "y": 1087,
+      "w": 134.0,
+      "h": 36,
+      "label": "up",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-13",
+      "kind": "card",
+      "x": 488.0,
+      "y": 1153,
+      "w": 28,
+      "h": 28,
+      "label": "\u00d7",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-1-14",
+      "kind": "card",
+      "x": 362,
+      "y": 1199,
+      "w": 280,
+      "h": 36,
+      "label": "down_proj",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-15",
+      "kind": "card",
+      "x": 362,
+      "y": 1253,
+      "w": 280,
+      "h": 36,
+      "label": "Tanh residual gate",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-16",
+      "kind": "card",
+      "x": 488.0,
+      "y": 1307,
+      "w": 28,
+      "h": 28,
+      "label": "\u00d7",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-1-17",
+      "kind": "card",
+      "x": 488.0,
+      "y": 1353,
+      "w": 28,
+      "h": 28,
+      "label": "+",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-1-17-caption",
+      "kind": "text",
+      "x": 362,
+      "y": 1358.0,
+      "w": 102.0,
+      "h": 18,
+      "label": "residual",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "heading-2",
+      "kind": "text",
+      "x": 676,
+      "y": 300,
+      "w": 308,
+      "h": 25,
+      "label": "OUTPUT / SAMPLING",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-2-0",
+      "kind": "card",
+      "x": 690,
+      "y": 345,
+      "w": 280,
+      "h": 36,
+      "label": "Final LayerNorm",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-2-1",
+      "kind": "card",
+      "x": 690,
+      "y": 399,
+      "w": 280,
+      "h": 36,
+      "label": "Time-conditioned scale",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-2-2",
+      "kind": "card",
+      "x": 690,
+      "y": 453,
+      "w": 280,
+      "h": 40,
+      "label": "Output projection\n4,096 \u2192 64",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-2-3",
+      "kind": "card",
+      "x": 690,
+      "y": 511,
+      "w": 280,
+      "h": 36,
+      "label": "FlowMatch Euler update",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-2-4",
+      "kind": "card",
+      "x": 690,
+      "y": 565,
+      "w": 280,
+      "h": 36,
+      "label": "Latent denormalization",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-2-5",
+      "kind": "card",
+      "x": 690,
+      "y": 619,
+      "w": 280,
+      "h": 36,
+      "label": "VAE decoder",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-2-6",
+      "kind": "card",
+      "x": 690,
+      "y": 673,
+      "w": 280,
+      "h": 36,
+      "label": "RGBA image",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "frame-0",
+      "kind": "group",
+      "x": 20,
+      "y": 333,
+      "w": 308,
+      "h": 266,
+      "label": "",
+      "fill": "none",
+      "stroke": "#e6e1da",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "frame-1",
+      "kind": "group",
+      "x": 348,
+      "y": 333,
+      "w": 308,
+      "h": 1074,
+      "label": "",
+      "fill": "none",
+      "stroke": "#e6e1da",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "frame-2",
+      "kind": "group",
+      "x": 676,
+      "y": 333,
+      "w": 308,
+      "h": 402,
+      "label": "",
+      "fill": "none",
+      "stroke": "#e6e1da",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "caption",
+      "kind": "text",
+      "x": 20,
+      "y": 1429,
+      "w": 964,
+      "h": 50,
+      "label": "Blue: condition encoder. Gold: generation DiT. Prefix t=0; target uses the current solver timestep.",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "operator-legend",
+      "kind": "text",
+      "x": 20,
+      "y": 1483,
+      "w": 964,
+      "h": 18,
+      "label": "+  addition     \u00d7  elementwise multiplication",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    }
+  ],
+  "edges": [
+    {
+      "source": "path-1",
+      "target": "path-2",
+      "points": [
+        [
+          392,
+          250
+        ],
+        [
+          412,
+          250
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "path-2",
+      "target": "path-3",
+      "points": [
+        [
+          588,
+          250
+        ],
+        [
+          608,
+          250
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "path-3",
+      "target": "path-4",
+      "points": [
+        [
+          784,
+          250
+        ],
+        [
+          804,
+          250
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "path-0",
+      "target": "path-2",
+      "points": [
+        [
+          108,
+          272
+        ],
+        [
+          108,
+          284
+        ],
+        [
+          500,
+          284
+        ],
+        [
+          500,
+          272
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-0-branch-0-0",
+      "target": "op-0-0-branch-0-1",
+      "points": [
+        [
+          101.0,
+          385
+        ],
+        [
+          101.0,
+          403
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-0-branch-0-1",
+      "target": "op-0-0-branch-0-2",
+      "points": [
+        [
+          101.0,
+          457
+        ],
+        [
+          101.0,
+          475
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-0-branch-1-0",
+      "target": "op-0-0-branch-1-1",
+      "points": [
+        [
+          247.0,
+          385
+        ],
+        [
+          247.0,
+          403
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-0-branch-0-2",
+      "target": "op-0-1",
+      "points": [
+        [
+          101.0,
+          511
+        ],
+        [
+          101.0,
+          529
+        ],
+        [
+          174.0,
+          529
+        ],
+        [
+          174.0,
+          537
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-0-branch-1-1",
+      "target": "op-0-1",
+      "points": [
+        [
+          247.0,
+          439
+        ],
+        [
+          247.0,
+          529
+        ],
+        [
+          174.0,
+          529
+        ],
+        [
+          174.0,
+          537
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-0-input",
+      "target": "op-1-0",
+      "points": [
+        [
+          502.0,
+          363
+        ],
+        [
+          502.0,
+          381
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-0",
+      "target": "op-1-1",
+      "points": [
+        [
+          502.0,
+          417
+        ],
+        [
+          502.0,
+          435
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-1",
+      "target": "op-1-2",
+      "points": [
+        [
+          502.0,
+          471
+        ],
+        [
+          502.0,
+          489
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-2",
+      "target": "op-1-3-branch-0-0",
+      "points": [
+        [
+          502.0,
+          529
+        ],
+        [
+          502.0,
+          539
+        ],
+        [
+          404.6666666666667,
+          539
+        ],
+        [
+          404.6666666666667,
+          547
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-3-branch-0-0",
+      "target": "op-1-3-branch-0-1",
+      "points": [
+        [
+          404.6666666666667,
+          583
+        ],
+        [
+          404.6666666666667,
+          601
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-2",
+      "target": "op-1-3-branch-1-0",
+      "points": [
+        [
+          502.0,
+          529
+        ],
+        [
+          502.0,
+          547
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-3-branch-1-0",
+      "target": "op-1-3-branch-1-1",
+      "points": [
+        [
+          502.0,
+          583
+        ],
+        [
+          502.0,
+          601
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-2",
+      "target": "op-1-3-branch-2-0",
+      "points": [
+        [
+          502.0,
+          529
+        ],
+        [
+          502.0,
+          539
+        ],
+        [
+          599.3333333333333,
+          539
+        ],
+        [
+          599.3333333333333,
+          547
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-3-branch-0-1",
+      "target": "op-1-4",
+      "points": [
+        [
+          404.6666666666667,
+          641
+        ],
+        [
+          404.6666666666667,
+          659
+        ],
+        [
+          502.0,
+          659
+        ],
+        [
+          502.0,
+          667
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-3-branch-1-1",
+      "target": "op-1-4",
+      "points": [
+        [
+          502.0,
+          641
+        ],
+        [
+          502.0,
+          667
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-3-branch-2-0",
+      "target": "op-1-4",
+      "points": [
+        [
+          599.3333333333333,
+          583
+        ],
+        [
+          599.3333333333333,
+          659
+        ],
+        [
+          502.0,
+          659
+        ],
+        [
+          502.0,
+          667
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-4",
+      "target": "op-1-5",
+      "points": [
+        [
+          502.0,
+          703
+        ],
+        [
+          502.0,
+          721
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-5",
+      "target": "op-1-6",
+      "points": [
+        [
+          502.0,
+          757
+        ],
+        [
+          502.0,
+          775
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-6",
+      "target": "op-1-7",
+      "points": [
+        [
+          502.0,
+          811
+        ],
+        [
+          502.0,
+          829
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-7",
+      "target": "op-1-8",
+      "points": [
+        [
+          502.0,
+          857
+        ],
+        [
+          502.0,
+          875
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-0-input",
+      "target": "op-1-8",
+      "points": [
+        [
+          514.0,
+          354.0
+        ],
+        [
+          649,
+          354.0
+        ],
+        [
+          649,
+          889.0
+        ],
+        [
+          516.0,
+          889.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-8",
+      "target": "op-1-9",
+      "points": [
+        [
+          502.0,
+          903
+        ],
+        [
+          502.0,
+          921
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-9",
+      "target": "op-1-10",
+      "points": [
+        [
+          502.0,
+          957
+        ],
+        [
+          502.0,
+          975
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-10",
+      "target": "op-1-11",
+      "points": [
+        [
+          502.0,
+          1011
+        ],
+        [
+          502.0,
+          1029
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-11",
+      "target": "op-1-12-branch-0-0",
+      "points": [
+        [
+          502.0,
+          1069
+        ],
+        [
+          502.0,
+          1079
+        ],
+        [
+          429.0,
+          1079
+        ],
+        [
+          429.0,
+          1087
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-11",
+      "target": "op-1-12-branch-1-0",
+      "points": [
+        [
+          502.0,
+          1069
+        ],
+        [
+          502.0,
+          1079
+        ],
+        [
+          575.0,
+          1079
+        ],
+        [
+          575.0,
+          1087
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-12-branch-0-0",
+      "target": "op-1-13",
+      "points": [
+        [
+          429.0,
+          1127
+        ],
+        [
+          429.0,
+          1167.0
+        ],
+        [
+          488.0,
+          1167.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-12-branch-1-0",
+      "target": "op-1-13",
+      "points": [
+        [
+          575.0,
+          1123
+        ],
+        [
+          575.0,
+          1167.0
+        ],
+        [
+          516.0,
+          1167.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-13",
+      "target": "op-1-14",
+      "points": [
+        [
+          502.0,
+          1181
+        ],
+        [
+          502.0,
+          1199
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-14",
+      "target": "op-1-15",
+      "points": [
+        [
+          502.0,
+          1235
+        ],
+        [
+          502.0,
+          1253
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-15",
+      "target": "op-1-16",
+      "points": [
+        [
+          502.0,
+          1289
+        ],
+        [
+          502.0,
+          1307
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-16",
+      "target": "op-1-17",
+      "points": [
+        [
+          502.0,
+          1335
+        ],
+        [
+          502.0,
+          1353
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-8",
+      "target": "op-1-17",
+      "points": [
+        [
+          516.0,
+          889.0
+        ],
+        [
+          649,
+          889.0
+        ],
+        [
+          649,
+          1367.0
+        ],
+        [
+          516.0,
+          1367.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-2-0",
+      "target": "op-2-1",
+      "points": [
+        [
+          830.0,
+          381
+        ],
+        [
+          830.0,
+          399
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-2-1",
+      "target": "op-2-2",
+      "points": [
+        [
+          830.0,
+          435
+        ],
+        [
+          830.0,
+          453
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-2-2",
+      "target": "op-2-3",
+      "points": [
+        [
+          830.0,
+          493
+        ],
+        [
+          830.0,
+          511
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-2-3",
+      "target": "op-2-4",
+      "points": [
+        [
+          830.0,
+          547
+        ],
+        [
+          830.0,
+          565
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-2-4",
+      "target": "op-2-5",
+      "points": [
+        [
+          830.0,
+          601
+        ],
+        [
+          830.0,
+          619
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-2-5",
+      "target": "op-2-6",
+      "points": [
+        [
+          830.0,
+          655
+        ],
+        [
+          830.0,
+          673
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    }
+  ]
+}

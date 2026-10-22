@@ -1,0 +1,63 @@
+{
+  "checkpointRevision": "53e0d26a1691aa473b6262d8196a8feb2c297df0",
+  "codeRevision": "fa2d1324c60050cd65209c6aaeac470e7fb412f5",
+  "config": {
+    "_class_name": "MiniMaxH3Transformer3DModel",
+    "_diffusers_version": "0.36.0.dev0",
+    "attention_head_dim": 128,
+    "audio_in_channels": 32,
+    "ffn_dim": 14336,
+    "final_norm_eps": 1e-05,
+    "freq_dim": 256,
+    "hidden_size": 5376,
+    "in_channels": 24,
+    "norm_eps": 1e-05,
+    "num_attention_heads": 56,
+    "num_layers": 50,
+    "num_refiner_layers": 2,
+    "patch_size": [
+      1,
+      2,
+      2
+    ],
+    "pdd_steps": 32,
+    "qk_norm_eps": 1e-05,
+    "rope_freq_dim": 16,
+    "rope_theta": 10000.0,
+    "text_dim": 5120,
+    "time_embed_dim": 2688,
+    "time_embed_hidden_dim": 5376
+  },
+  "inference": {
+    "attention_backend": "VIDEO_SPARSE_ATTN_H3",
+    "audio_scheduler_shift": 3.0,
+    "base_model_revision": "hf://MiniMaxAI/MiniMax-H3@9bfb6693f2cf6de171db46d1aa586f67d773a1da",
+    "conditioning": "fixed_ordered_references_target_only_flow",
+    "grid_max_t": 0.999,
+    "guidance_scale": 1.0,
+    "model_type": "ref2va",
+    "num_inference_steps": 8,
+    "pdd_step_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32
+    ],
+    "pdd_steps": 32,
+    "schema": "fasth3-inference-contract-v1",
+    "schema_version": "fasth3-inference-contract-v1",
+    "transformer_component": "transformer_ref",
+    "transformer_forwards": 8,
+    "video_scheduler_shift": 12.0,
+    "vsa_ref_keep_rate": 0.1,
+    "vsa_ref_policy": "p2_multi_region",
+    "vsa_sparsity": 0.9,
+    "vsa_tile_size": 128
+  },
+  "tensorPayloadBytes": 70142174464
+}

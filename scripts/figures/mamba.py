@@ -1,0 +1,51 @@
+"""Mamba-1 mixer with explicit content, gate, and recurrent state paths."""
+import json, subprocess, sys
+from pathlib import Path
+root=Path(__file__).resolve().parents[2]
+nodes,edges=[],[]
+def n(id,x,y,w,h,label,tone='gray',shape=None,kind='card'):
+ fill,stroke={'gray':('#f7f5f2','#aaa49c'),'blue':('#e7eff6','#799ab8'),'green':('#edf2e9','#8fa580'),'gold':('#f4e7cb','#b5873a')}[tone]
+ item=dict(id=id,kind=kind,x=x,y=y,w=w,h=h,label=label,fill=fill if kind=='card' else 'none',stroke=stroke if kind=='card' else 'none',color='#23201e',size=12,weight=400,radius=0,shadow=False)
+ if shape:item['shape']=shape
+ nodes.append(item)
+def e(a,b,pts):edges.append(dict(source=a,target=b,points=pts,color='#8f8a84',arrow=True))
+n('title',20,10,960,30,'MAMBA-1 MIXER · SELECTIVE STATE UPDATE',kind='text')
+n('input',40,70,240,40,'Input xₜ','blue');n('proj',40,140,240,40,'in_proj · split content / z','blue')
+n('conv',40,220,240,40,'Depthwise causal Conv1d','blue');n('act',40,290,240,40,'SiLU → uₜ','blue')
+n('convstate',350,220,240,40,'Convolution cache','gold')
+n('param',40,370,240,40,'x_proj → rₜ, Bₜ, Cₜ','green');n('dt',40,440,240,40,'dt_proj + bias','green');n('softplus',40,510,240,40,'Softplus → Δₜ','green')
+n('ssm',350,510,240,48,'Selective SSM\nexpanded at right','green');n('state',350,410,240,42,'SSM state hₜ₋₁','gold')
+n('skip',40,600,240,40,'D ⊙ uₜ','blue');n('add',455,605,30,30,'+','gray','ellipse')
+n('gate',350,140,240,40,'SiLU(zₜ)','gold');n('mul',455,700,30,30,'×','gray','ellipse');n('out',350,770,240,42,'out_proj','blue')
+# Detail lane: parameters and recurrent writes/readout.
+n('detail',680,70,300,40,'SSM · ONE TOKEN',kind='text')
+for id,y,label,tone in [('disc',150,'Discretize\nĀₜ = exp(Δₜ A), B̃ₜ = Δₜ Bₜ','green'),('old',250,'Āₜ ⊙ hₜ₋₁','gold'),('write',340,'B̃ₜ ⊙ uₜ','green'),('new',520,'Write hₜ to SSM cache','gold'),('read',610,'Readout Cₜ hₜ','green')]:n(id,680,y,300,48,label,tone)
+n('join',815,440,30,30,'+','gray','ellipse')
+e('input','proj',[[160,110],[160,140]])
+e('proj','conv',[[160,180],[160,220]])
+e('proj','gate',[[280,160],[350,160]])
+e('convstate','conv',[[350,240],[280,240]])
+e('conv','act',[[160,260],[160,290]])
+e('act','param',[[160,330],[160,370]])
+e('param','dt',[[160,410],[160,440]])
+e('dt','softplus',[[160,480],[160,510]])
+e('softplus','ssm',[[280,530],[350,530]])
+e('param','ssm',[[280,390],[325,390],[325,522],[350,522]])
+e('act','ssm',[[280,310],[310,310],[310,544],[350,544]])
+e('state','ssm',[[470,452],[470,510]])
+e('ssm','state',[[590,534],[615,534],[615,431],[590,431]])
+e('act','skip',[[40,310],[24,310],[24,620],[40,620]])
+e('skip','add',[[280,620],[455,620]])
+e('ssm','add',[[470,558],[470,605]])
+e('add','mul',[[470,635],[470,700]])
+e('gate','mul',[[590,160],[635,160],[635,715],[485,715]])
+e('mul','out',[[470,730],[470,770]])
+e('disc','old',[[830,198],[830,250]])
+e('disc','write',[[980,174],[992,174],[992,364],[980,364]])
+e('old','join',[[680,274],[665,274],[665,455],[815,455]])
+e('write','join',[[830,388],[830,440]])
+e('join','new',[[830,470],[830,520]])
+e('new','read',[[830,568],[830,610]])
+n('note',20,850,960,60,'Left: mixer only; outer block norm and residual are omitted. Right: recurrence detail.\nConv cache and SSM state are updated, not appended like full-context KV. ⊙ / × denote elementwise multiplication.',kind='text')
+out=root/'public/figures/mamba-mechanism';path=Path(str(out)+'.layout.json');path.write_text(json.dumps(dict(width=1010,height=930,background='#ffffff',font='Inter, Arial, sans-serif',nodes=nodes,edges=edges),indent=2)+'\n')
+subprocess.run([sys.executable,str(Path(__file__).with_name('render_flint.py')),str(path),'--output',str(out)],check=True)

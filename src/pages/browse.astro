@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ModelRows from '../components/ModelRows.astro';
+import { models, concepts } from '../data/catalog.mjs';
+const families = [...new Set(models.map(model => model.family))];
+const categories = [...new Set(models.map(model => model.category))];
+const kinds = [...new Set(models.map(model => model.kind))];
+---
+<Layout title="浏览全部模型">
+  <div class="browse-page filter-page"><header class="browse-intro"><h1>浏览全部模型</h1><p>按厂商、任务、结构和概念筛选。</p></header>
+    <form id="browse-filters">
+      <div class="filter-status"><strong id="result-count">{models.length} 个模型</strong><button type="button" id="toggle-filters" aria-expanded="false" aria-controls="filter-panel">筛选 ▾</button><div id="active-filters"></div><label class="sort-label">排序 <select name="sort" aria-label="排序"><option value="default">默认顺序</option><option value="name">名称 A–Z</option><option value="provider">厂商</option></select></label><button type="reset" id="clear-filters" hidden>清除</button></div>
+      <div id="filter-panel" hidden>
+        <label class="browse-query">搜索 <input type="search" name="q" placeholder="模型名称、厂商或概念"/></label>
+        {[['provider','厂商',families],['category','任务',categories],['kind','结构',kinds],['concept','概念',concepts.map(concept => concept.id)]].map(([name,label,options]) => <fieldset><legend>{label}</legend><div class="filter-options">{options.map(value => <button type="button" data-filter-key={name} data-filter-value={value} aria-pressed="false">{name === 'concept' ? concepts.find(concept => concept.id === value).name : value}</button>)}</div></fieldset>)}
+      </div>
+    </form>
+    <p id="browse-empty" hidden>没有匹配的模型。<button type="button" id="empty-clear">清除筛选</button></p>
+    <ModelRows models={models}/>
+  </div>
+</Layout>
+<script>
+  const form = document.querySelector<HTMLFormElement>('#browse-filters')!;
+  const query = form.elements.namedItem('q') as HTMLInputElement;
+  const sort = form.elements.namedItem('sort') as HTMLSelectElement;
+  const panel = document.querySelector<HTMLElement>('#filter-panel')!;
+  const toggle = document.querySelector<HTMLButtonElement>('#toggle-filters')!;
+  const chips = document.querySelector<HTMLElement>('#active-filters')!;
+  const list = document.querySelector<HTMLElement>('.model-rows')!;
+  const rows = [...list.querySelectorAll<HTMLElement>('.model-row')];
+  const keys = ['provider', 'category', 'kind', 'concept'];
+  let state = new URLSearchParams(location.search);
+  function render() {
+    query.value = state.get('q') || '';
+    sort.value = state.get('sort') || 'default';
+    let count = 0;
+    rows.forEach(row => {
+      const match = keys.every(key => !state.get(key) || (key === 'concept' ? row.dataset.concepts!.split(',').includes(state.get(key)!) : row.dataset[key] === state.get(key))) && row.dataset.search!.includes(query.value.trim().toLowerCase());
+      row.hidden = !match;
+      if (match) count++;
+    });
+    const sorted = [...rows];
+    if (sort.value === 'name' || sort.value === 'provider') sorted.sort((a,b) => a.dataset[sort.value]!.localeCompare(b.dataset[sort.value]!, 'zh-CN'));
+    sorted.forEach(row => list.append(row));
+    document.querySelector('#result-count')!.textContent = `${count} 个模型`;
+    document.querySelector<HTMLElement>('#browse-empty')!.hidden = count > 0;
+    chips.replaceChildren();
+    for (const key of ['q', ...keys]) {
+      const value = state.get(key);
+      if (!value) continue;
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'filter-chip';
+      chip.textContent = `${value} ×`;
+      chip.setAttribute('aria-label', `移除 ${value} 筛选`);
+      chip.addEventListener('click', () => { state.delete(key); update(); });
+      chips.append(chip);
+    }
+    form.querySelectorAll<HTMLButtonElement>('[data-filter-key]').forEach(button => button.setAttribute('aria-pressed', String(state.get(button.dataset.filterKey!) === button.dataset.filterValue)));
+    document.querySelector<HTMLElement>('#clear-filters')!.hidden = chips.childElementCount === 0;
+  }
+  function update() {
+    const params = state.toString();
+    history.pushState(null, '', `${location.pathname}${params ? `?${params}` : ''}`);
+    render();
+  }
+  toggle.addEventListener('click', () => { panel.hidden = !panel.hidden; toggle.setAttribute('aria-expanded', String(!panel.hidden)); });
+  form.querySelectorAll<HTMLButtonElement>('[data-filter-key]').forEach(button => button.addEventListener('click', () => {
+    const key = button.dataset.filterKey!;
+    const value = button.dataset.filterValue!;
+    if (state.get(key) === value) state.delete(key); else state.set(key, value);
+    update();
+  }));
+  query.addEventListener('input', () => { if (query.value.trim()) state.set('q',query.value.trim()); else state.delete('q'); update(); });
+  sort.addEventListener('change', () => { if (sort.value === 'default') state.delete('sort'); else state.set('sort',sort.value); update(); });
+  form.addEventListener('submit', event => event.preventDefault());
+  function clear() { state = new URLSearchParams(); update(); }
+  form.addEventListener('reset', event => { event.preventDefault(); clear(); });
+  document.querySelector('#empty-clear')!.addEventListener('click', clear);
+  addEventListener('popstate', () => { state = new URLSearchParams(location.search); render(); });
+  render();
+</script>

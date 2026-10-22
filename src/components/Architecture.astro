@@ -1,0 +1,18 @@
+---
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+const { figure, alt } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const source = readFileSync(resolve('public', 'figures', `${figure}.svg`), 'utf8');
+const style = source.match(/<style>([\s\S]*?)<\/style>/)?.[1];
+const light = style?.match(/:root\{([^}]+)\}/)?.[1];
+const dark = style?.match(/:root\[data-theme="dark"\]\{([^}]+)\}/)?.[1];
+if (!light || !dark) throw new Error(`Missing theme palette: ${figure}`);
+const inlineStyle = `<style>svg[data-atlas-figure]{${light.replace('color-scheme:light dark;', '')}}.dark svg[data-atlas-figure]{${dark}}</style>`;
+const svg = source
+  .replace(/<\?xml[^>]*>\s*/, '')
+  .replace(/<svg\b/, '<svg data-atlas-figure aria-hidden="true"')
+  .replace(/<style>[\s\S]*?<\/style>/, inlineStyle);
+---
+<a class="architecture-primary" href={`${base}figures/${figure}.svg`} target="_blank" rel="noopener" aria-label={alt} set:html={svg} />

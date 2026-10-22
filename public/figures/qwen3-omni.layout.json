@@ -1,0 +1,260 @@
+{
+  "width": 1000,
+  "height": 640,
+  "background": "#ffffff",
+  "nodes": [
+    {
+      "id": "title",
+      "kind": "text",
+      "x": 25,
+      "y": 10,
+      "w": 950,
+      "h": 60,
+      "label": "Qwen3-Omni \u00b7 Thinker\u2013Talker",
+      "size": 28,
+      "fill": "none",
+      "stroke": "none",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "input",
+      "kind": "card",
+      "x": 40,
+      "y": 130,
+      "w": 220,
+      "h": 80,
+      "label": "Text / image / audio / video",
+      "size": 15,
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "thinker",
+      "kind": "card",
+      "x": 340,
+      "y": 130,
+      "w": 260,
+      "h": 80,
+      "label": "Thinker\nmultimodal understanding",
+      "size": 15,
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "text",
+      "kind": "card",
+      "x": 710,
+      "y": 40,
+      "w": 240,
+      "h": 65,
+      "label": "Text output",
+      "size": 15,
+      "fill": "#f7f8f9",
+      "stroke": "#c8cdd1",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "talker",
+      "kind": "card",
+      "x": 710,
+      "y": 180,
+      "w": 240,
+      "h": 80,
+      "label": "Talker\nautoregressive speech codes",
+      "size": 15,
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "predictor",
+      "kind": "card",
+      "x": 710,
+      "y": 330,
+      "w": 240,
+      "h": 80,
+      "label": "Code predictor\nremaining codebooks",
+      "size": 15,
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "wav",
+      "kind": "card",
+      "x": 340,
+      "y": 330,
+      "w": 260,
+      "h": 80,
+      "label": "Code2Wav\ncodec chunks \u2192 waveform",
+      "size": 15,
+      "fill": "#eef3eb",
+      "stroke": "#a0b797",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "audio",
+      "kind": "card",
+      "x": 40,
+      "y": 330,
+      "w": 220,
+      "h": 80,
+      "label": "Streaming audio output",
+      "size": 15,
+      "fill": "#eef3eb",
+      "stroke": "#a0b797",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "note",
+      "kind": "text",
+      "x": 25,
+      "y": 565,
+      "w": 950,
+      "h": 60,
+      "label": "Logical component flow; code predictor belongs to the Talker path. Not a GPU placement diagram.",
+      "size": 12,
+      "fill": "none",
+      "stroke": "none",
+      "color": "#667079"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input",
+      "target": "thinker",
+      "points": [
+        [
+          260,
+          170
+        ],
+        [
+          340,
+          170
+        ]
+      ],
+      "label": "encoded inputs",
+      "label_x": 300,
+      "label_y": 145
+    },
+    {
+      "source": "thinker",
+      "target": "text",
+      "points": [
+        [
+          600,
+          150
+        ],
+        [
+          650,
+          150
+        ],
+        [
+          650,
+          72
+        ],
+        [
+          710,
+          72
+        ]
+      ],
+      "label": "text",
+      "label_x": 650,
+      "label_y": 45
+    },
+    {
+      "source": "thinker",
+      "target": "talker",
+      "points": [
+        [
+          600,
+          190
+        ],
+        [
+          650,
+          190
+        ],
+        [
+          650,
+          220
+        ],
+        [
+          710,
+          220
+        ]
+      ],
+      "label": "conditioning",
+      "label_x": 655,
+      "label_y": 175
+    },
+    {
+      "source": "talker",
+      "target": "predictor",
+      "points": [
+        [
+          830,
+          260
+        ],
+        [
+          830,
+          330
+        ]
+      ],
+      "label": "first codebook",
+      "label_x": 890,
+      "label_y": 298
+    },
+    {
+      "source": "predictor",
+      "target": "wav",
+      "points": [
+        [
+          710,
+          370
+        ],
+        [
+          600,
+          370
+        ]
+      ],
+      "label": "codec codes",
+      "label_x": 655,
+      "label_y": 345
+    },
+    {
+      "source": "wav",
+      "target": "audio",
+      "points": [
+        [
+          340,
+          370
+        ],
+        [
+          260,
+          370
+        ]
+      ],
+      "label": "waveform",
+      "label_x": 300,
+      "label_y": 345
+    }
+  ]
+}

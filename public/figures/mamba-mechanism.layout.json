@@ -1,0 +1,853 @@
+{
+  "width": 1010,
+  "height": 930,
+  "background": "#ffffff",
+  "font": "Inter, Arial, sans-serif",
+  "nodes": [
+    {
+      "id": "title",
+      "kind": "text",
+      "x": 20,
+      "y": 10,
+      "w": 960,
+      "h": 30,
+      "label": "MAMBA-1 MIXER \u00b7 SELECTIVE STATE UPDATE",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "input",
+      "kind": "card",
+      "x": 40,
+      "y": 70,
+      "w": 240,
+      "h": 40,
+      "label": "Input x\u209c",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "proj",
+      "kind": "card",
+      "x": 40,
+      "y": 140,
+      "w": 240,
+      "h": 40,
+      "label": "in_proj \u00b7 split content / z",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "conv",
+      "kind": "card",
+      "x": 40,
+      "y": 220,
+      "w": 240,
+      "h": 40,
+      "label": "Depthwise causal Conv1d",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "act",
+      "kind": "card",
+      "x": 40,
+      "y": 290,
+      "w": 240,
+      "h": 40,
+      "label": "SiLU \u2192 u\u209c",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "convstate",
+      "kind": "card",
+      "x": 350,
+      "y": 220,
+      "w": 240,
+      "h": 40,
+      "label": "Convolution cache",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "param",
+      "kind": "card",
+      "x": 40,
+      "y": 370,
+      "w": 240,
+      "h": 40,
+      "label": "x_proj \u2192 r\u209c, B\u209c, C\u209c",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "dt",
+      "kind": "card",
+      "x": 40,
+      "y": 440,
+      "w": 240,
+      "h": 40,
+      "label": "dt_proj + bias",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "softplus",
+      "kind": "card",
+      "x": 40,
+      "y": 510,
+      "w": 240,
+      "h": 40,
+      "label": "Softplus \u2192 \u0394\u209c",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "ssm",
+      "kind": "card",
+      "x": 350,
+      "y": 510,
+      "w": 240,
+      "h": 48,
+      "label": "Selective SSM\nexpanded at right",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "state",
+      "kind": "card",
+      "x": 350,
+      "y": 410,
+      "w": 240,
+      "h": 42,
+      "label": "SSM state h\u209c\u208b\u2081",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "skip",
+      "kind": "card",
+      "x": 40,
+      "y": 600,
+      "w": 240,
+      "h": 40,
+      "label": "D \u2299 u\u209c",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "add",
+      "kind": "card",
+      "x": 455,
+      "y": 605,
+      "w": 30,
+      "h": 30,
+      "label": "+",
+      "fill": "#f7f5f2",
+      "stroke": "#aaa49c",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "shape": "ellipse"
+    },
+    {
+      "id": "gate",
+      "kind": "card",
+      "x": 350,
+      "y": 140,
+      "w": 240,
+      "h": 40,
+      "label": "SiLU(z\u209c)",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "mul",
+      "kind": "card",
+      "x": 455,
+      "y": 700,
+      "w": 30,
+      "h": 30,
+      "label": "\u00d7",
+      "fill": "#f7f5f2",
+      "stroke": "#aaa49c",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "shape": "ellipse"
+    },
+    {
+      "id": "out",
+      "kind": "card",
+      "x": 350,
+      "y": 770,
+      "w": 240,
+      "h": 42,
+      "label": "out_proj",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "detail",
+      "kind": "text",
+      "x": 680,
+      "y": 70,
+      "w": 300,
+      "h": 40,
+      "label": "SSM \u00b7 ONE TOKEN",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "disc",
+      "kind": "card",
+      "x": 680,
+      "y": 150,
+      "w": 300,
+      "h": 48,
+      "label": "Discretize\n\u0100\u209c = exp(\u0394\u209c A), B\u0303\u209c = \u0394\u209c B\u209c",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "old",
+      "kind": "card",
+      "x": 680,
+      "y": 250,
+      "w": 300,
+      "h": 48,
+      "label": "\u0100\u209c \u2299 h\u209c\u208b\u2081",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "write",
+      "kind": "card",
+      "x": 680,
+      "y": 340,
+      "w": 300,
+      "h": 48,
+      "label": "B\u0303\u209c \u2299 u\u209c",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "new",
+      "kind": "card",
+      "x": 680,
+      "y": 520,
+      "w": 300,
+      "h": 48,
+      "label": "Write h\u209c to SSM cache",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "read",
+      "kind": "card",
+      "x": 680,
+      "y": 610,
+      "w": 300,
+      "h": 48,
+      "label": "Readout C\u209c h\u209c",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    },
+    {
+      "id": "join",
+      "kind": "card",
+      "x": 815,
+      "y": 440,
+      "w": 30,
+      "h": 30,
+      "label": "+",
+      "fill": "#f7f5f2",
+      "stroke": "#aaa49c",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "shape": "ellipse"
+    },
+    {
+      "id": "note",
+      "kind": "text",
+      "x": 20,
+      "y": 850,
+      "w": 960,
+      "h": 60,
+      "label": "Left: mixer only; outer block norm and residual are omitted. Right: recurrence detail.\nConv cache and SSM state are updated, not appended like full-context KV. \u2299 / \u00d7 denote elementwise multiplication.",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "input",
+      "target": "proj",
+      "points": [
+        [
+          160,
+          110
+        ],
+        [
+          160,
+          140
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "proj",
+      "target": "conv",
+      "points": [
+        [
+          160,
+          180
+        ],
+        [
+          160,
+          220
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "proj",
+      "target": "gate",
+      "points": [
+        [
+          280,
+          160
+        ],
+        [
+          350,
+          160
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "convstate",
+      "target": "conv",
+      "points": [
+        [
+          350,
+          240
+        ],
+        [
+          280,
+          240
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "conv",
+      "target": "act",
+      "points": [
+        [
+          160,
+          260
+        ],
+        [
+          160,
+          290
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "act",
+      "target": "param",
+      "points": [
+        [
+          160,
+          330
+        ],
+        [
+          160,
+          370
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "param",
+      "target": "dt",
+      "points": [
+        [
+          160,
+          410
+        ],
+        [
+          160,
+          440
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "dt",
+      "target": "softplus",
+      "points": [
+        [
+          160,
+          480
+        ],
+        [
+          160,
+          510
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "softplus",
+      "target": "ssm",
+      "points": [
+        [
+          280,
+          530
+        ],
+        [
+          350,
+          530
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "param",
+      "target": "ssm",
+      "points": [
+        [
+          280,
+          390
+        ],
+        [
+          325,
+          390
+        ],
+        [
+          325,
+          522
+        ],
+        [
+          350,
+          522
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "act",
+      "target": "ssm",
+      "points": [
+        [
+          280,
+          310
+        ],
+        [
+          310,
+          310
+        ],
+        [
+          310,
+          544
+        ],
+        [
+          350,
+          544
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "state",
+      "target": "ssm",
+      "points": [
+        [
+          470,
+          452
+        ],
+        [
+          470,
+          510
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "ssm",
+      "target": "state",
+      "points": [
+        [
+          590,
+          534
+        ],
+        [
+          615,
+          534
+        ],
+        [
+          615,
+          431
+        ],
+        [
+          590,
+          431
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "act",
+      "target": "skip",
+      "points": [
+        [
+          40,
+          310
+        ],
+        [
+          24,
+          310
+        ],
+        [
+          24,
+          620
+        ],
+        [
+          40,
+          620
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "skip",
+      "target": "add",
+      "points": [
+        [
+          280,
+          620
+        ],
+        [
+          455,
+          620
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "ssm",
+      "target": "add",
+      "points": [
+        [
+          470,
+          558
+        ],
+        [
+          470,
+          605
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "add",
+      "target": "mul",
+      "points": [
+        [
+          470,
+          635
+        ],
+        [
+          470,
+          700
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "gate",
+      "target": "mul",
+      "points": [
+        [
+          590,
+          160
+        ],
+        [
+          635,
+          160
+        ],
+        [
+          635,
+          715
+        ],
+        [
+          485,
+          715
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "mul",
+      "target": "out",
+      "points": [
+        [
+          470,
+          730
+        ],
+        [
+          470,
+          770
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "disc",
+      "target": "old",
+      "points": [
+        [
+          830,
+          198
+        ],
+        [
+          830,
+          250
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "disc",
+      "target": "write",
+      "points": [
+        [
+          980,
+          174
+        ],
+        [
+          992,
+          174
+        ],
+        [
+          992,
+          364
+        ],
+        [
+          980,
+          364
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "old",
+      "target": "join",
+      "points": [
+        [
+          680,
+          274
+        ],
+        [
+          665,
+          274
+        ],
+        [
+          665,
+          455
+        ],
+        [
+          815,
+          455
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "write",
+      "target": "join",
+      "points": [
+        [
+          830,
+          388
+        ],
+        [
+          830,
+          440
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "join",
+      "target": "new",
+      "points": [
+        [
+          830,
+          470
+        ],
+        [
+          830,
+          520
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "new",
+      "target": "read",
+      "points": [
+        [
+          830,
+          568
+        ],
+        [
+          830,
+          610
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "width": 1000,
+  "height": 640,
+  "background": "#ffffff",
+  "nodes": [
+    {
+      "id": "title",
+      "kind": "text",
+      "x": 25,
+      "y": 10,
+      "w": 950,
+      "h": 60,
+      "label": "Decoder-only Transformer \u00b7 teaching schematic",
+      "size": 28,
+      "fill": "none",
+      "stroke": "none",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "embed",
+      "kind": "card",
+      "x": 40,
+      "y": 150,
+      "w": 200,
+      "h": 70,
+      "label": "Token embedding\n[N] \u2192 [N, D]",
+      "size": 15,
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "attn",
+      "kind": "card",
+      "x": 340,
+      "y": 150,
+      "w": 260,
+      "h": 70,
+      "label": "Norm \u2192 causal attention\nQKV + RoPE \u2192 projection",
+      "size": 15,
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "add1",
+      "kind": "card",
+      "x": 700,
+      "y": 150,
+      "w": 240,
+      "h": 70,
+      "label": "Residual add\nx + Attention(Norm(x))",
+      "size": 15,
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "mlp",
+      "kind": "card",
+      "x": 700,
+      "y": 330,
+      "w": 240,
+      "h": 70,
+      "label": "Norm \u2192 dense SwiGLU\nD \u2192 F \u2192 D",
+      "size": 15,
+      "fill": "#eef3eb",
+      "stroke": "#a0b797",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "add2",
+      "kind": "card",
+      "x": 340,
+      "y": 330,
+      "w": 260,
+      "h": 70,
+      "label": "Residual add\nh + MLP(Norm(h))",
+      "size": 15,
+      "fill": "#f7f0e4",
+      "stroke": "#bfa878",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "head",
+      "kind": "card",
+      "x": 40,
+      "y": 330,
+      "w": 200,
+      "h": 70,
+      "label": "Final norm + LM head\n[D] \u2192 logits [V]",
+      "size": 15,
+      "fill": "#edf3f8",
+      "stroke": "#9cb6cd",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "sample",
+      "kind": "card",
+      "x": 40,
+      "y": 480,
+      "w": 200,
+      "h": 60,
+      "label": "Sample next token",
+      "size": 15,
+      "fill": "#f7f8f9",
+      "stroke": "#c8cdd1",
+      "color": "#232b31",
+      "shadow": false,
+      "radius": 0
+    },
+    {
+      "id": "note",
+      "kind": "text",
+      "x": 25,
+      "y": 565,
+      "w": 950,
+      "h": 60,
+      "label": "Pre-norm / RoPE / SwiGLU example. The block repeats L times; dimensions are illustrative, not checkpoint-specific.",
+      "size": 12,
+      "fill": "none",
+      "stroke": "none",
+      "color": "#667079"
+    }
+  ],
+  "edges": [
+    {
+      "source": "embed",
+      "target": "attn",
+      "points": [
+        [
+          240,
+          185
+        ],
+        [
+          340,
+          185
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0
+    },
+    {
+      "source": "attn",
+      "target": "add1",
+      "points": [
+        [
+          600,
+          185
+        ],
+        [
+          700,
+          185
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0
+    },
+    {
+      "source": "embed",
+      "target": "add1",
+      "points": [
+        [
+          140,
+          150
+        ],
+        [
+          140,
+          95
+        ],
+        [
+          820,
+          95
+        ],
+        [
+          820,
+          150
+        ]
+      ],
+      "label": "residual",
+      "label_x": 480,
+      "label_y": 78
+    },
+    {
+      "source": "add1",
+      "target": "mlp",
+      "points": [
+        [
+          820,
+          220
+        ],
+        [
+          820,
+          330
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0
+    },
+    {
+      "source": "mlp",
+      "target": "add2",
+      "points": [
+        [
+          700,
+          365
+        ],
+        [
+          600,
+          365
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0
+    },
+    {
+      "source": "add1",
+      "target": "add2",
+      "points": [
+        [
+          940,
+          185
+        ],
+        [
+          975,
+          185
+        ],
+        [
+          975,
+          445
+        ],
+        [
+          470,
+          445
+        ],
+        [
+          470,
+          400
+        ]
+      ],
+      "label": "residual",
+      "label_x": 740,
+      "label_y": 465
+    },
+    {
+      "source": "add2",
+      "target": "head",
+      "points": [
+        [
+          340,
+          365
+        ],
+        [
+          240,
+          365
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0
+    },
+    {
+      "source": "head",
+      "target": "sample",
+      "points": [
+        [
+          140,
+          400
+        ],
+        [
+          140,
+          480
+        ]
+      ],
+      "label": "",
+      "label_x": 0,
+      "label_y": 0
+    }
+  ]
+}

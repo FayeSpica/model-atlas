@@ -1,0 +1,3008 @@
+{
+  "width": 1004,
+  "height": 1333,
+  "background": "#ffffff",
+  "font": "Inter, Arial, sans-serif",
+  "nodes": [
+    {
+      "id": "title",
+      "kind": "text",
+      "x": 20,
+      "y": 12,
+      "w": 964,
+      "h": 26,
+      "label": "QWEN3-TTS-12HZ-1.7B-CUSTOMVOICE",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 15,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "stack-label-0",
+      "kind": "text",
+      "x": 20,
+      "y": 54,
+      "w": 340,
+      "h": 22,
+      "label": "TALKER \u00b7 28 LAYERS",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "stack-0-0",
+      "kind": "card",
+      "x": 370.0,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-0-0",
+      "kind": "text",
+      "x": 367.0,
+      "y": 76,
+      "w": 25.428571428571427,
+      "h": 16,
+      "label": "0",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-1",
+      "kind": "card",
+      "x": 391.42857142857144,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-2",
+      "kind": "card",
+      "x": 412.85714285714283,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-3",
+      "kind": "card",
+      "x": 434.2857142857143,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-4",
+      "kind": "card",
+      "x": 455.7142857142857,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-5",
+      "kind": "card",
+      "x": 477.1428571428571,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-6",
+      "kind": "card",
+      "x": 498.57142857142856,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-7",
+      "kind": "card",
+      "x": 520.0,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-0-7",
+      "kind": "text",
+      "x": 517.0,
+      "y": 76,
+      "w": 25.428571428571427,
+      "h": 16,
+      "label": "7",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-8",
+      "kind": "card",
+      "x": 541.4285714285714,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-9",
+      "kind": "card",
+      "x": 562.8571428571429,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-10",
+      "kind": "card",
+      "x": 584.2857142857142,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-11",
+      "kind": "card",
+      "x": 605.7142857142857,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-12",
+      "kind": "card",
+      "x": 627.1428571428571,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-13",
+      "kind": "card",
+      "x": 648.5714285714286,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-14",
+      "kind": "card",
+      "x": 670.0,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-15",
+      "kind": "card",
+      "x": 691.4285714285713,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-0-15",
+      "kind": "text",
+      "x": 688.4285714285713,
+      "y": 76,
+      "w": 25.428571428571427,
+      "h": 16,
+      "label": "15",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-16",
+      "kind": "card",
+      "x": 712.8571428571429,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-17",
+      "kind": "card",
+      "x": 734.2857142857142,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-18",
+      "kind": "card",
+      "x": 755.7142857142857,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-19",
+      "kind": "card",
+      "x": 777.1428571428571,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-20",
+      "kind": "card",
+      "x": 798.5714285714286,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-21",
+      "kind": "card",
+      "x": 820.0,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-22",
+      "kind": "card",
+      "x": 841.4285714285713,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-23",
+      "kind": "card",
+      "x": 862.8571428571429,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-0-23",
+      "kind": "text",
+      "x": 859.8571428571429,
+      "y": 76,
+      "w": 25.428571428571427,
+      "h": 16,
+      "label": "23",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-24",
+      "kind": "card",
+      "x": 884.2857142857142,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-25",
+      "kind": "card",
+      "x": 905.7142857142857,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-26",
+      "kind": "card",
+      "x": 927.1428571428571,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-0-27",
+      "kind": "card",
+      "x": 948.5714285714286,
+      "y": 54,
+      "w": 19.428571428571427,
+      "h": 20,
+      "label": "",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-0-27",
+      "kind": "text",
+      "x": 945.5714285714286,
+      "y": 76,
+      "w": 25.428571428571427,
+      "h": 16,
+      "label": "27",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-label-1",
+      "kind": "text",
+      "x": 20,
+      "y": 102,
+      "w": 340,
+      "h": 22,
+      "label": "CODE PREDICTOR \u00b7 5 LAYERS",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "stack-1-0",
+      "kind": "card",
+      "x": 370,
+      "y": 102,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-1-0",
+      "kind": "text",
+      "x": 367,
+      "y": 124,
+      "w": 26,
+      "h": 16,
+      "label": "0",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-1",
+      "kind": "card",
+      "x": 392,
+      "y": 102,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-2",
+      "kind": "card",
+      "x": 414,
+      "y": 102,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-3",
+      "kind": "card",
+      "x": 436,
+      "y": 102,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "stack-1-4",
+      "kind": "card",
+      "x": 458,
+      "y": 102,
+      "w": 20,
+      "h": 20,
+      "label": "",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "tick-1-4",
+      "kind": "text",
+      "x": 455,
+      "y": 124,
+      "w": 26,
+      "h": 16,
+      "label": "4",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "path-label",
+      "kind": "text",
+      "x": 20,
+      "y": 150,
+      "w": 960,
+      "h": 20,
+      "label": "COMPONENT PATH \u00b7 STAGE BOUNDARIES MAY DIFFER",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "path-0",
+      "kind": "card",
+      "x": 20,
+      "y": 180,
+      "w": 176,
+      "h": 44,
+      "label": "\u8f93\u5165\u6761\u4ef6\nText + voice",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "path-1",
+      "kind": "card",
+      "x": 216,
+      "y": 180,
+      "w": 176,
+      "h": 44,
+      "label": "\u65f6\u95f4\u751f\u6210\nTalker \u00b7 28 layers",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "path-2",
+      "kind": "card",
+      "x": 412,
+      "y": 180,
+      "w": 176,
+      "h": 44,
+      "label": "\u7801\u672c\u8865\u5168\nPredictor \u00b7 5 layers",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "path-3",
+      "kind": "card",
+      "x": 608,
+      "y": 180,
+      "w": 176,
+      "h": 44,
+      "label": "\u97f3\u9891\u89e3\u7801\n12Hz tokenizer",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "path-4",
+      "kind": "card",
+      "x": 804,
+      "y": 180,
+      "w": 176,
+      "h": 44,
+      "label": "\u8f93\u51fa\nWaveform",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "heading-0",
+      "kind": "text",
+      "x": 20,
+      "y": 252,
+      "w": 308,
+      "h": 25,
+      "label": "TALKER \u00b7 REPRESENTATIVE LAYER",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-0-0",
+      "kind": "card",
+      "x": 34,
+      "y": 297,
+      "w": 280,
+      "h": 36,
+      "label": "Text projection",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-1",
+      "kind": "card",
+      "x": 160.0,
+      "y": 351,
+      "w": 28,
+      "h": 28,
+      "label": "+",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-0-1-caption",
+      "kind": "text",
+      "x": 34,
+      "y": 356.0,
+      "w": 102.0,
+      "h": 18,
+      "label": "codec embedding",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-0-2",
+      "kind": "card",
+      "x": 34,
+      "y": 397,
+      "w": 280,
+      "h": 36,
+      "label": "Input RMSNorm",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-3",
+      "kind": "card",
+      "x": 34,
+      "y": 451,
+      "w": 280,
+      "h": 40,
+      "label": "QKV projection\nQ 16 \u00d7 128 \u00b7 KV 8 \u00d7 128",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-4-branch-0-0",
+      "kind": "card",
+      "x": 34,
+      "y": 509,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "Q RMSNorm",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-4-branch-0-1",
+      "kind": "card",
+      "x": 34,
+      "y": 563,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "Q MRoPE",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-4-branch-1-0",
+      "kind": "card",
+      "x": 131.33333333333331,
+      "y": 509,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "K RMSNorm",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-4-branch-1-1",
+      "kind": "card",
+      "x": 131.33333333333331,
+      "y": 563,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "K MRoPE",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-4-branch-2-0",
+      "kind": "card",
+      "x": 228.66666666666663,
+      "y": 509,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "V",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-5",
+      "kind": "card",
+      "x": 34,
+      "y": 625,
+      "w": 280,
+      "h": 36,
+      "label": "GQA",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-6",
+      "kind": "card",
+      "x": 34,
+      "y": 679,
+      "w": 280,
+      "h": 36,
+      "label": "o_proj",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-7",
+      "kind": "card",
+      "x": 160.0,
+      "y": 733,
+      "w": 28,
+      "h": 28,
+      "label": "+",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-0-7-caption",
+      "kind": "text",
+      "x": 34,
+      "y": 738.0,
+      "w": 102.0,
+      "h": 18,
+      "label": "residual",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-0-8",
+      "kind": "card",
+      "x": 34,
+      "y": 779,
+      "w": 280,
+      "h": 36,
+      "label": "Post-attention RMSNorm",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-9",
+      "kind": "card",
+      "x": 34,
+      "y": 833,
+      "w": 280,
+      "h": 40,
+      "label": "gate_up_proj\nfused linear \u00b7 d_ff 6,144",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-10-branch-0-0",
+      "kind": "card",
+      "x": 34,
+      "y": 891,
+      "w": 134.0,
+      "h": 40,
+      "label": "SiLU\ngate",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-10-branch-1-0",
+      "kind": "card",
+      "x": 180.0,
+      "y": 891,
+      "w": 134.0,
+      "h": 36,
+      "label": "up",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-11",
+      "kind": "card",
+      "x": 160.0,
+      "y": 957,
+      "w": 28,
+      "h": 28,
+      "label": "\u00d7",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-0-12",
+      "kind": "card",
+      "x": 34,
+      "y": 1003,
+      "w": 280,
+      "h": 36,
+      "label": "down_proj",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-13",
+      "kind": "card",
+      "x": 160.0,
+      "y": 1057,
+      "w": 28,
+      "h": 28,
+      "label": "+",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-0-13-caption",
+      "kind": "text",
+      "x": 34,
+      "y": 1062.0,
+      "w": 102.0,
+      "h": 18,
+      "label": "residual",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-0-14",
+      "kind": "card",
+      "x": 34,
+      "y": 1103,
+      "w": 280,
+      "h": 36,
+      "label": "Final RMSNorm",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-0-15",
+      "kind": "card",
+      "x": 34,
+      "y": 1157,
+      "w": 280,
+      "h": 36,
+      "label": "First-code head",
+      "fill": "#e7eff6",
+      "stroke": "#799ab8",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "heading-1",
+      "kind": "text",
+      "x": 348,
+      "y": 252,
+      "w": 308,
+      "h": 25,
+      "label": "CODE PREDICTOR \u00b7 REPRESENTATIVE LAYER",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-1-0",
+      "kind": "card",
+      "x": 362,
+      "y": 297,
+      "w": 280,
+      "h": 36,
+      "label": "Talker hidden projection",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-1",
+      "kind": "card",
+      "x": 488.0,
+      "y": 351,
+      "w": 28,
+      "h": 28,
+      "label": "+",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-1-1-caption",
+      "kind": "text",
+      "x": 362,
+      "y": 356.0,
+      "w": 102.0,
+      "h": 18,
+      "label": "previous-code embedding",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-1-2",
+      "kind": "card",
+      "x": 362,
+      "y": 397,
+      "w": 280,
+      "h": 36,
+      "label": "Input RMSNorm",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-3",
+      "kind": "card",
+      "x": 362,
+      "y": 451,
+      "w": 280,
+      "h": 40,
+      "label": "QKV projection\nQ 16 \u00d7 128 \u00b7 KV 8 \u00d7 128",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-4-branch-0-0",
+      "kind": "card",
+      "x": 362,
+      "y": 509,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "Q RMSNorm",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-4-branch-0-1",
+      "kind": "card",
+      "x": 362,
+      "y": 563,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "Q RoPE",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-4-branch-1-0",
+      "kind": "card",
+      "x": 459.3333333333333,
+      "y": 509,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "K RMSNorm",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-4-branch-1-1",
+      "kind": "card",
+      "x": 459.3333333333333,
+      "y": 563,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "K RoPE",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-4-branch-2-0",
+      "kind": "card",
+      "x": 556.6666666666666,
+      "y": 509,
+      "w": 85.33333333333333,
+      "h": 36,
+      "label": "V",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 10,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-5",
+      "kind": "card",
+      "x": 362,
+      "y": 625,
+      "w": 280,
+      "h": 36,
+      "label": "GQA",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-6",
+      "kind": "card",
+      "x": 362,
+      "y": 679,
+      "w": 280,
+      "h": 36,
+      "label": "o_proj",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-7",
+      "kind": "card",
+      "x": 488.0,
+      "y": 733,
+      "w": 28,
+      "h": 28,
+      "label": "+",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-1-7-caption",
+      "kind": "text",
+      "x": 362,
+      "y": 738.0,
+      "w": 102.0,
+      "h": 18,
+      "label": "residual",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-1-8",
+      "kind": "card",
+      "x": 362,
+      "y": 779,
+      "w": 280,
+      "h": 36,
+      "label": "Post-attention RMSNorm",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-9",
+      "kind": "card",
+      "x": 362,
+      "y": 833,
+      "w": 280,
+      "h": 40,
+      "label": "gate_up_proj\nfused linear \u00b7 d_ff 3,072",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-10-branch-0-0",
+      "kind": "card",
+      "x": 362,
+      "y": 891,
+      "w": 134.0,
+      "h": 40,
+      "label": "SiLU\ngate",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-10-branch-1-0",
+      "kind": "card",
+      "x": 508.0,
+      "y": 891,
+      "w": 134.0,
+      "h": 36,
+      "label": "up",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-11",
+      "kind": "card",
+      "x": 488.0,
+      "y": 957,
+      "w": 28,
+      "h": 28,
+      "label": "\u00d7",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-1-12",
+      "kind": "card",
+      "x": 362,
+      "y": 1003,
+      "w": 280,
+      "h": 36,
+      "label": "down_proj",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-13",
+      "kind": "card",
+      "x": 488.0,
+      "y": 1057,
+      "w": 28,
+      "h": 28,
+      "label": "+",
+      "fill": "#ffffff",
+      "stroke": "#8f8a84",
+      "color": "#23201e",
+      "size": 20,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center",
+      "shape": "ellipse"
+    },
+    {
+      "id": "op-1-13-caption",
+      "kind": "text",
+      "x": 362,
+      "y": 1062.0,
+      "w": 102.0,
+      "h": 18,
+      "label": "residual",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 9,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-1-14",
+      "kind": "card",
+      "x": 362,
+      "y": 1103,
+      "w": 280,
+      "h": 36,
+      "label": "Final RMSNorm",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-1-15",
+      "kind": "card",
+      "x": 362,
+      "y": 1157,
+      "w": 280,
+      "h": 36,
+      "label": "Codebook head",
+      "fill": "#edf2e9",
+      "stroke": "#8fa580",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "heading-2",
+      "kind": "text",
+      "x": 676,
+      "y": 252,
+      "w": 308,
+      "h": 25,
+      "label": "CODEC \u00b7 COMPONENT PATH",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "op-2-0",
+      "kind": "card",
+      "x": 690,
+      "y": 297,
+      "w": 280,
+      "h": 36,
+      "label": "16-code frame",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-2-1",
+      "kind": "card",
+      "x": 690,
+      "y": 351,
+      "w": 280,
+      "h": 36,
+      "label": "Codebook embedding",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-2-2",
+      "kind": "card",
+      "x": 690,
+      "y": 405,
+      "w": 280,
+      "h": 36,
+      "label": "Code reconstruction",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-2-3",
+      "kind": "card",
+      "x": 690,
+      "y": 459,
+      "w": 280,
+      "h": 36,
+      "label": "Speech tokenizer decoder",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "op-2-4",
+      "kind": "card",
+      "x": 690,
+      "y": 513,
+      "w": 280,
+      "h": 36,
+      "label": "Waveform chunks",
+      "fill": "#f4e7cb",
+      "stroke": "#b5873a",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "frame-0",
+      "kind": "group",
+      "x": 20,
+      "y": 285,
+      "w": 308,
+      "h": 934,
+      "label": "",
+      "fill": "none",
+      "stroke": "#e6e1da",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "frame-1",
+      "kind": "group",
+      "x": 348,
+      "y": 285,
+      "w": 308,
+      "h": 934,
+      "label": "",
+      "fill": "none",
+      "stroke": "#e6e1da",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "frame-2",
+      "kind": "group",
+      "x": 676,
+      "y": 285,
+      "w": 308,
+      "h": 290,
+      "label": "",
+      "fill": "none",
+      "stroke": "#e6e1da",
+      "color": "#23201e",
+      "size": 12,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "center"
+    },
+    {
+      "id": "caption",
+      "kind": "text",
+      "x": 20,
+      "y": 1241,
+      "w": 964,
+      "h": 50,
+      "label": "CustomVoice checkpoint. 28 network layers \u2260 15 codebook predictions. Tokenizer is a separate component.",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    },
+    {
+      "id": "operator-legend",
+      "kind": "text",
+      "x": 20,
+      "y": 1295,
+      "w": 964,
+      "h": 18,
+      "label": "+  addition     \u00d7  elementwise multiplication",
+      "fill": "none",
+      "stroke": "none",
+      "color": "#23201e",
+      "size": 11,
+      "weight": 400,
+      "radius": 0,
+      "shadow": false,
+      "align": "left"
+    }
+  ],
+  "edges": [
+    {
+      "source": "path-0",
+      "target": "path-1",
+      "points": [
+        [
+          196,
+          202
+        ],
+        [
+          216,
+          202
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "path-1",
+      "target": "path-2",
+      "points": [
+        [
+          392,
+          202
+        ],
+        [
+          412,
+          202
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "path-2",
+      "target": "path-3",
+      "points": [
+        [
+          588,
+          202
+        ],
+        [
+          608,
+          202
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "path-3",
+      "target": "path-4",
+      "points": [
+        [
+          784,
+          202
+        ],
+        [
+          804,
+          202
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-0",
+      "target": "op-0-1",
+      "points": [
+        [
+          174.0,
+          333
+        ],
+        [
+          174.0,
+          351
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-1-caption",
+      "target": "op-0-1",
+      "points": [
+        [
+          136.0,
+          365.0
+        ],
+        [
+          160.0,
+          365.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-1",
+      "target": "op-0-2",
+      "points": [
+        [
+          174.0,
+          379
+        ],
+        [
+          174.0,
+          397
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-2",
+      "target": "op-0-3",
+      "points": [
+        [
+          174.0,
+          433
+        ],
+        [
+          174.0,
+          451
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-3",
+      "target": "op-0-4-branch-0-0",
+      "points": [
+        [
+          174.0,
+          491
+        ],
+        [
+          174.0,
+          501
+        ],
+        [
+          76.66666666666666,
+          501
+        ],
+        [
+          76.66666666666666,
+          509
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-4-branch-0-0",
+      "target": "op-0-4-branch-0-1",
+      "points": [
+        [
+          76.66666666666666,
+          545
+        ],
+        [
+          76.66666666666666,
+          563
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-3",
+      "target": "op-0-4-branch-1-0",
+      "points": [
+        [
+          174.0,
+          491
+        ],
+        [
+          174.0,
+          501
+        ],
+        [
+          173.99999999999997,
+          501
+        ],
+        [
+          173.99999999999997,
+          509
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-4-branch-1-0",
+      "target": "op-0-4-branch-1-1",
+      "points": [
+        [
+          173.99999999999997,
+          545
+        ],
+        [
+          173.99999999999997,
+          563
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-3",
+      "target": "op-0-4-branch-2-0",
+      "points": [
+        [
+          174.0,
+          491
+        ],
+        [
+          174.0,
+          501
+        ],
+        [
+          271.3333333333333,
+          501
+        ],
+        [
+          271.3333333333333,
+          509
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-4-branch-0-1",
+      "target": "op-0-5",
+      "points": [
+        [
+          76.66666666666666,
+          599
+        ],
+        [
+          76.66666666666666,
+          617
+        ],
+        [
+          174.0,
+          617
+        ],
+        [
+          174.0,
+          625
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-4-branch-1-1",
+      "target": "op-0-5",
+      "points": [
+        [
+          173.99999999999997,
+          599
+        ],
+        [
+          173.99999999999997,
+          617
+        ],
+        [
+          174.0,
+          617
+        ],
+        [
+          174.0,
+          625
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-4-branch-2-0",
+      "target": "op-0-5",
+      "points": [
+        [
+          271.3333333333333,
+          545
+        ],
+        [
+          271.3333333333333,
+          617
+        ],
+        [
+          174.0,
+          617
+        ],
+        [
+          174.0,
+          625
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-5",
+      "target": "op-0-6",
+      "points": [
+        [
+          174.0,
+          661
+        ],
+        [
+          174.0,
+          679
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-6",
+      "target": "op-0-7",
+      "points": [
+        [
+          174.0,
+          715
+        ],
+        [
+          174.0,
+          733
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-1",
+      "target": "op-0-7",
+      "points": [
+        [
+          188.0,
+          365.0
+        ],
+        [
+          321,
+          365.0
+        ],
+        [
+          321,
+          747.0
+        ],
+        [
+          188.0,
+          747.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-7",
+      "target": "op-0-8",
+      "points": [
+        [
+          174.0,
+          761
+        ],
+        [
+          174.0,
+          779
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-8",
+      "target": "op-0-9",
+      "points": [
+        [
+          174.0,
+          815
+        ],
+        [
+          174.0,
+          833
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-9",
+      "target": "op-0-10-branch-0-0",
+      "points": [
+        [
+          174.0,
+          873
+        ],
+        [
+          174.0,
+          883
+        ],
+        [
+          101.0,
+          883
+        ],
+        [
+          101.0,
+          891
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-9",
+      "target": "op-0-10-branch-1-0",
+      "points": [
+        [
+          174.0,
+          873
+        ],
+        [
+          174.0,
+          883
+        ],
+        [
+          247.0,
+          883
+        ],
+        [
+          247.0,
+          891
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-10-branch-0-0",
+      "target": "op-0-11",
+      "points": [
+        [
+          101.0,
+          931
+        ],
+        [
+          101.0,
+          971.0
+        ],
+        [
+          160.0,
+          971.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-10-branch-1-0",
+      "target": "op-0-11",
+      "points": [
+        [
+          247.0,
+          927
+        ],
+        [
+          247.0,
+          971.0
+        ],
+        [
+          188.0,
+          971.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-11",
+      "target": "op-0-12",
+      "points": [
+        [
+          174.0,
+          985
+        ],
+        [
+          174.0,
+          1003
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-12",
+      "target": "op-0-13",
+      "points": [
+        [
+          174.0,
+          1039
+        ],
+        [
+          174.0,
+          1057
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-7",
+      "target": "op-0-13",
+      "points": [
+        [
+          188.0,
+          747.0
+        ],
+        [
+          321,
+          747.0
+        ],
+        [
+          321,
+          1071.0
+        ],
+        [
+          188.0,
+          1071.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-13",
+      "target": "op-0-14",
+      "points": [
+        [
+          174.0,
+          1085
+        ],
+        [
+          174.0,
+          1103
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-0-14",
+      "target": "op-0-15",
+      "points": [
+        [
+          174.0,
+          1139
+        ],
+        [
+          174.0,
+          1157
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-0",
+      "target": "op-1-1",
+      "points": [
+        [
+          502.0,
+          333
+        ],
+        [
+          502.0,
+          351
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-1-caption",
+      "target": "op-1-1",
+      "points": [
+        [
+          464.0,
+          365.0
+        ],
+        [
+          488.0,
+          365.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-1",
+      "target": "op-1-2",
+      "points": [
+        [
+          502.0,
+          379
+        ],
+        [
+          502.0,
+          397
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-2",
+      "target": "op-1-3",
+      "points": [
+        [
+          502.0,
+          433
+        ],
+        [
+          502.0,
+          451
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-3",
+      "target": "op-1-4-branch-0-0",
+      "points": [
+        [
+          502.0,
+          491
+        ],
+        [
+          502.0,
+          501
+        ],
+        [
+          404.6666666666667,
+          501
+        ],
+        [
+          404.6666666666667,
+          509
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-4-branch-0-0",
+      "target": "op-1-4-branch-0-1",
+      "points": [
+        [
+          404.6666666666667,
+          545
+        ],
+        [
+          404.6666666666667,
+          563
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-3",
+      "target": "op-1-4-branch-1-0",
+      "points": [
+        [
+          502.0,
+          491
+        ],
+        [
+          502.0,
+          509
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-4-branch-1-0",
+      "target": "op-1-4-branch-1-1",
+      "points": [
+        [
+          502.0,
+          545
+        ],
+        [
+          502.0,
+          563
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-3",
+      "target": "op-1-4-branch-2-0",
+      "points": [
+        [
+          502.0,
+          491
+        ],
+        [
+          502.0,
+          501
+        ],
+        [
+          599.3333333333333,
+          501
+        ],
+        [
+          599.3333333333333,
+          509
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-4-branch-0-1",
+      "target": "op-1-5",
+      "points": [
+        [
+          404.6666666666667,
+          599
+        ],
+        [
+          404.6666666666667,
+          617
+        ],
+        [
+          502.0,
+          617
+        ],
+        [
+          502.0,
+          625
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-4-branch-1-1",
+      "target": "op-1-5",
+      "points": [
+        [
+          502.0,
+          599
+        ],
+        [
+          502.0,
+          625
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-4-branch-2-0",
+      "target": "op-1-5",
+      "points": [
+        [
+          599.3333333333333,
+          545
+        ],
+        [
+          599.3333333333333,
+          617
+        ],
+        [
+          502.0,
+          617
+        ],
+        [
+          502.0,
+          625
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-5",
+      "target": "op-1-6",
+      "points": [
+        [
+          502.0,
+          661
+        ],
+        [
+          502.0,
+          679
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-6",
+      "target": "op-1-7",
+      "points": [
+        [
+          502.0,
+          715
+        ],
+        [
+          502.0,
+          733
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-1",
+      "target": "op-1-7",
+      "points": [
+        [
+          516.0,
+          365.0
+        ],
+        [
+          649,
+          365.0
+        ],
+        [
+          649,
+          747.0
+        ],
+        [
+          516.0,
+          747.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-7",
+      "target": "op-1-8",
+      "points": [
+        [
+          502.0,
+          761
+        ],
+        [
+          502.0,
+          779
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-8",
+      "target": "op-1-9",
+      "points": [
+        [
+          502.0,
+          815
+        ],
+        [
+          502.0,
+          833
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-9",
+      "target": "op-1-10-branch-0-0",
+      "points": [
+        [
+          502.0,
+          873
+        ],
+        [
+          502.0,
+          883
+        ],
+        [
+          429.0,
+          883
+        ],
+        [
+          429.0,
+          891
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-9",
+      "target": "op-1-10-branch-1-0",
+      "points": [
+        [
+          502.0,
+          873
+        ],
+        [
+          502.0,
+          883
+        ],
+        [
+          575.0,
+          883
+        ],
+        [
+          575.0,
+          891
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-10-branch-0-0",
+      "target": "op-1-11",
+      "points": [
+        [
+          429.0,
+          931
+        ],
+        [
+          429.0,
+          971.0
+        ],
+        [
+          488.0,
+          971.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-10-branch-1-0",
+      "target": "op-1-11",
+      "points": [
+        [
+          575.0,
+          927
+        ],
+        [
+          575.0,
+          971.0
+        ],
+        [
+          516.0,
+          971.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-11",
+      "target": "op-1-12",
+      "points": [
+        [
+          502.0,
+          985
+        ],
+        [
+          502.0,
+          1003
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-12",
+      "target": "op-1-13",
+      "points": [
+        [
+          502.0,
+          1039
+        ],
+        [
+          502.0,
+          1057
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-7",
+      "target": "op-1-13",
+      "points": [
+        [
+          516.0,
+          747.0
+        ],
+        [
+          649,
+          747.0
+        ],
+        [
+          649,
+          1071.0
+        ],
+        [
+          516.0,
+          1071.0
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-13",
+      "target": "op-1-14",
+      "points": [
+        [
+          502.0,
+          1085
+        ],
+        [
+          502.0,
+          1103
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-1-14",
+      "target": "op-1-15",
+      "points": [
+        [
+          502.0,
+          1139
+        ],
+        [
+          502.0,
+          1157
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-2-0",
+      "target": "op-2-1",
+      "points": [
+        [
+          830.0,
+          333
+        ],
+        [
+          830.0,
+          351
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-2-1",
+      "target": "op-2-2",
+      "points": [
+        [
+          830.0,
+          387
+        ],
+        [
+          830.0,
+          405
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-2-2",
+      "target": "op-2-3",
+      "points": [
+        [
+          830.0,
+          441
+        ],
+        [
+          830.0,
+          459
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    },
+    {
+      "source": "op-2-3",
+      "target": "op-2-4",
+      "points": [
+        [
+          830.0,
+          495
+        ],
+        [
+          830.0,
+          513
+        ]
+      ],
+      "color": "#8f8a84",
+      "arrow": true
+    }
+  ]
+}

@@ -1,8 +1,73 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Flow from '../../components/Flow.astro';
-import {models,concepts,checked} from '../../data/catalog.mjs';
-export function getStaticPaths(){return models.map(model=>({params:{slug:model.slug},props:{model}}));}
-const {model:m}=Astro.props;const base=import.meta.env.BASE_URL.replace(/\/?$/, '/');
+import Guide from '../../components/Guide.astro';
+import Architecture from '../../components/Architecture.astro';
+import { recipes } from '../../lib/recipes-ui.jsx';
+import { getProviderLogo } from '../../vendor/recipes/providers.js';
+import { models, concepts, checked } from '../../data/catalog.mjs';
+export function getStaticPaths() {
+  return models.map(model => ({ params: { slug: model.slug }, props: { model } }));
+}
+const { model } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const figure = model.figure || model.slug;
+const recipe = recipes.find(entry => entry.slug === model.slug);
+const logo = getProviderLogo(recipe.hf_org);
+const huggingFace = model.modelId ? `https://huggingface.co/${model.modelId}` : model.slug === 'minimax-h3' ? 'https://huggingface.co/MiniMaxAI/MiniMax-H3' : `https://huggingface.co/${recipe.hf_org}`;
+const relatedConcepts = model.concepts.map(id => concepts.find(concept => concept.id === id));
 ---
-<Layout title={m.name} description={m.lead}><div class="article-wrap"><a class="breadcrumb" href={`${base}#models`}>模型图谱 / {m.category}</a><header class="article-header"><span class="eyebrow">{m.family} · {m.kind}</span><h1>{m.name}</h1><p>{m.lead}</p><div class="facts">{m.facts.map(f=><span>{f}</span>)}</div></header><div class="scope"><strong>阅读范围</strong><p>{m.scope}</p></div><Flow model={m}/><div class="article-columns"><aside><strong>本页导读</strong><a href="#mechanism">核心机制</a>{(m.figure||m.slug==='minimax-h3')&&<a href="#full-diagram">完整结构图</a>}<a href="#exercise">自测练习</a><a href="#sources">源码与版本</a><hr/><strong>相关概念</strong>{m.concepts.map(c=><a href={`${base}concepts/${c}/`}>{concepts.find(x=>x.id===c)?.name}</a>)}</aside><article><div id="mechanism">{m.sections.map(([title,body])=><section class="prose-section"><h2>{title}</h2><p>{body}</p></section>)}</div>{(m.figure||m.slug==='minimax-h3')&&<section id="full-diagram" class="prose-section"><h2>{m.figureTitle||'从整体到 DiT block'}</h2><p>{m.figureNote||'图中的形状来自实现默认值。箭头表示逻辑数据依赖，不表示设备划分或执行耗时。'}</p><a href={`${base}figures/${m.figure||'minimax-h3'}.svg`} target="_blank" rel="noopener"><img class="full-diagram" src={`${base}figures/${m.figure||'minimax-h3'}.svg`} alt={m.figureAlt||'MiniMax-H3 条件编码、联合扩散、VAE 解码和 DiT 内部结构'} loading="lazy"/></a><div class="figure-downloads"><a class="text-link" href={`${base}figures/${m.figure||'minimax-h3'}.svg`} download>下载可编辑 SVG</a>{m.figure&&<><a class="text-link" href={`${base}figures/${m.figure}.drawio`} download>下载 draw.io</a><a class="text-link" href={`${base}figures/${m.figure}.layout.json`} download>下载布局 JSON</a></>}</div></section>}<section id="exercise" class="exercise"><span class="eyebrow">停下来想一想</span><h2>{m.question}</h2><details><summary>展开参考答案</summary><p>{m.answer}</p></details></section><section id="sources" class="source-box"><h2>源码与版本</h2><p>核对日期：{checked}<br/>依据版本：<code>{m.revision}</code></p><ul>{m.sources.map(([name,url])=><li><a href={url} target="_blank" rel="noopener">{name} ↗</a></li>)}</ul></section><div class="next-reading"><span>继续探索</span>{models.filter(x=>x.slug!==m.slug).map(x=><a href={`${base}models/${x.slug}/`}>{x.name} ↗</a>)}</div></article></div></div></Layout>
+<Layout title={model.name} description={model.lead} sidebar>
+  <div class="article-wrap">
+    <header class="mb-8">
+      <div class="flex items-start gap-4 mb-4">
+        {logo && <img src={logo} alt={model.family} width="44" height="44" class="rounded-xl mt-0.5 shrink-0"/>}
+        <div class="min-w-0 flex-1">
+          <h1 class="text-2xl sm:text-3xl font-bold tracking-tight font-mono break-all"><span class="text-muted-foreground font-normal">{recipe.hf_org}/</span>{model.name}</h1>
+          <p class="text-sm text-muted-foreground mt-1 line-clamp-2">{model.lead}</p>
+          <div class="flex items-center gap-4 mt-2">
+            {recipe.hf_org !== 'Fundamentals' && <a href={huggingFace} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-vllm-blue transition-colors">🤗 HuggingFace ↗</a>}
+            <a href={model.sources[0][1]} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-vllm-blue transition-colors">查看源码 ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="inline-flex items-center rounded-md border border-foreground px-2 py-0.5 text-xs font-medium">{model.architecture === 'dense' ? 'Dense' : model.architecture === 'moe' ? 'MoE' : model.kind}</span>
+        {model.parameterCount && <span class="inline-flex items-center rounded-md border border-foreground px-2 py-0.5 text-xs font-medium" title={model.parameterLabel || (model.parameterTotal ? `参数量：${model.parameterTotal.toLocaleString('en-US')}` : model.parameterCount)}>{model.parameterCount}{model.activeParameterCount && ` / ${model.activeParameterCount}`}</span>}
+        {model.facts.filter(fact => model.architecture || fact !== model.kind).map(fact => <span class="inline-flex items-center rounded-md border border-border px-2 py-0.5 text-xs font-medium">{fact}</span>)}
+        <span class="inline-flex items-center rounded-md bg-secondary text-secondary-foreground px-2 py-0.5 text-xs font-medium">{model.category}</span>
+      </div>
+    </header>
+    {['qwen2','qwen2-5-vl','qwen3-tts','qwen3-omni','minimax-h3'].includes(model.slug) && <a class="concept-map-entry" href={`${base}model/?m=${model.slug}`}>3D Model Explorer <span>展开模型与层内张量 ↗</span></a>}
+    <Guide>
+    <section id="architecture" aria-label="模型架构图">
+      <Architecture figure={figure} alt={model.figureAlt || `${model.name} 模型架构图`} />
+      <div class="figure-downloads">
+        <a class="text-link" href={`${base}figures/${figure}.svg`} target="_blank" rel="noopener">打开完整架构图 ↗</a>
+        <a class="text-link" href={`${base}figures/${figure}.svg`} download>下载 SVG</a>
+        {model.figure && <><a class="text-link" href={`${base}figures/${figure}.drawio`} download>下载 draw.io</a><a class="text-link" href={`${base}figures/${figure}.layout.json`} download>布局 JSON</a></>}
+      </div>
+    </section>
+    <article class="model-explanation">
+      <section class="prose-section model-scope">
+        <h2>说明</h2>
+        <p>{model.scope}</p>
+        {model.figureNote && <p>{model.figureNote}</p>}
+      </section>
+      {model.sections.map(([title, body]) => <section class="prose-section"><h2>{title}</h2><p>{body}</p></section>)}
+      <section id="concepts" class="prose-section">
+        <h2>相关概念</h2>
+        <div class="related-models">{relatedConcepts.map(concept => <a href={`${base}concepts/${concept.id}/`}><strong>{concept.name}</strong><span>{concept.intro}</span></a>)}</div>
+      </section>
+      <section id="exercise" class="exercise">
+        <h2>{model.question}</h2>
+        <details><summary>展开参考答案</summary><p>{model.answer}</p></details>
+      </section>
+      <section id="sources" class="source-box">
+        <h2>源码与版本</h2>
+        <p>核对日期：{checked}<br />依据版本：<code>{model.revision}</code></p>
+        <ul>{model.sources.map(([name, url]) => <li><a href={url} target="_blank" rel="noopener">{name} ↗</a></li>)}</ul>
+      </section>
+    </article>
+    </Guide>
+  </div>
+</Layout>

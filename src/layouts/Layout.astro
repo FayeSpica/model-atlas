@@ -1,10 +1,49 @@
 ---
-import '../styles/global.css';
-const {title='Model Atlas',description='看图理解模型，沿源码深入。'}=Astro.props;
-const base=import.meta.env.BASE_URL.replace(/\/?$/, '/');
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/jetbrains-mono/400.css';
+import '../vendor/recipes/globals.css';
+import '../styles/content.css';
+import { SearchBox } from '../vendor/recipes/SearchBox.jsx';
+import { ThemeToggle } from '../vendor/recipes/theme-toggle.jsx';
+import { ModelSidebar } from '../vendor/recipes/ModelSidebar.jsx';
+import { recipes } from '../lib/recipes-ui.jsx';
+import { providers } from '../data/providers.mjs';
+const { title = 'Model Atlas', description = '模型结构图、算子说明、张量形状与源码解析。', sidebar = false, provider = '', immersive = false } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const currentModel = recipes.find(recipe => Astro.url.pathname === `${base}models/${recipe.slug}/`);
+const currentOrg = currentModel?.hf_org || providers.find(entry => entry.id === provider)?.organization || '';
+const groups = providers.map(entry => [entry.organization, recipes.filter(recipe => recipe.hf_org === entry.organization)]);
 ---
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><title>{title} · Model Atlas</title><link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml"/></head><body>
-<a class="skip" href="#main">跳到正文</a>
-<header class="topbar"><a class="brand" href={base}><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M3 24V6h8v18M11 15h8M19 24V6h8v18" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="15" cy="15" r="3" fill="#b5873a"/></svg>Model Atlas</a><nav aria-label="主导航"><a href={`${base}#models`}>模型图谱</a><a href={`${base}concepts/`}>基础概念</a><a href="https://github.com/FayeSpica/model-atlas">GitHub ↗</a></nav></header>
-<main id="main"><slot/></main><footer><span>Model Atlas · 模型结构图谱</span><span>以图理解 · 以源码核对</span><a href="https://github.com/FayeSpica/model-atlas/blob/main/CONTRIBUTING.md">贡献一篇模型拆解 ↗</a></footer>
-</body></html>
+<!doctype html>
+<html lang="zh-CN" style="--font-inter:Inter;--font-jetbrains:'JetBrains Mono'">
+  <head><meta charset="UTF-8"/>
+    <script is:inline>
+      (() => {
+        let saved;
+        try { saved = localStorage.getItem('theme'); } catch {}
+        const dark = saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', dark);
+        document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+      })();
+    </script>
+    <style is:inline>html{background:#fff}html.dark{background:oklch(0.129 0.042 264.695)}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><title>{title} · Model Atlas</title><link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml"/></head>
+  <body class:list={["antialiased bg-background text-foreground min-h-screen flex flex-col", { "immersive-layout": immersive }]}>
+    <a class="sr-only focus:not-sr-only" href="#main">跳到正文</a>
+    <header class="border-b border-border bg-background/95 backdrop-blur-sm sticky top-0 z-30">
+      <div class="max-w-[1480px] mx-auto px-4 sm:px-6 h-16 flex items-center gap-4">
+        <a href={base} class="flex items-center gap-3 hover:opacity-80 transition-opacity group shrink-0"><img src={`${base}favicon.svg`} width="30" height="30" alt="" aria-hidden="true"/><span class="font-semibold text-base group-hover:text-vllm-blue transition-colors">Model Atlas</span></a>
+        <div class="flex-1 flex justify-center max-w-xl mx-auto"><SearchBox recipes={recipes} client:load /></div>
+        <nav class="flex items-center gap-4 text-sm text-muted-foreground shrink-0" aria-label="主导航"><a href={`${base}browse/`} class="hover:text-foreground transition-colors hidden sm:inline">浏览</a><a href={`${base}model/`} class="hover:text-foreground transition-colors">模型视图</a><a href={`${base}map/`} class="hover:text-foreground transition-colors">地图</a><a href={`${base}concepts/`} class="hover:text-foreground transition-colors hidden sm:inline">概念</a><a href="https://github.com/FayeSpica/model-atlas" class="hover:text-foreground transition-colors hidden sm:inline">GitHub</a><ThemeToggle client:load /></nav>
+      </div>
+    </header>
+    <div class="flex-1">
+      {sidebar ? <div class="max-w-[1480px] mx-auto px-4 sm:px-6 flex gap-6"><ModelSidebar recipesByOrg={groups} currentOrg={currentOrg} currentRepo={currentModel?.hf_repo || ''} client:load /><main id="main" class="flex-1 min-w-0"><slot /></main></div> : <main id="main"><slot /></main>}
+    </div>
+    <footer class="border-t border-border mt-auto"><div class="max-w-[1480px] mx-auto px-4 sm:px-6 py-5 text-xs text-muted-foreground flex flex-wrap gap-x-5 gap-y-2"><a href="https://github.com/FayeSpica/model-atlas" class="hover:text-foreground">GitHub</a><a href="https://github.com/FayeSpica/model-atlas/blob/main/CONTRIBUTING.md" class="hover:text-foreground">贡献指南</a><a href="https://github.com/vllm-project/recipes" class="hover:text-foreground">UI components: vLLM Recipes · Apache-2.0</a></div></footer>
+  </body>
+</html>
+<style is:global>.immersive-layout>header,.immersive-layout>footer{display:none}.immersive-layout{overflow:hidden;background:#06090c}.immersive-layout #main{height:100dvh}</style>

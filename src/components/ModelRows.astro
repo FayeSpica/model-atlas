@@ -1,0 +1,7 @@
+---
+const { models } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<div class="model-rows border border-border rounded-xl divide-y divide-border/60 overflow-hidden">
+  {models.map(model => <a class="model-row flex flex-wrap items-center gap-x-3 gap-y-1.5 px-4 py-3 hover:bg-muted/40 transition-all group" href={`${base}models/${model.slug}/`} data-name={model.name} data-provider={model.family} data-category={model.category} data-kind={model.kind} data-concepts={model.concepts.join(',')} data-search={`${model.name} ${model.family} ${model.kind} ${model.category} ${model.concepts.join(' ')}`.toLowerCase()}><div class="min-w-[220px] shrink-0"><strong class="block text-sm font-semibold font-mono group-hover:text-vllm-blue transition-colors">{model.name}</strong><small class="block text-xs text-muted-foreground font-mono">{model.family}</small></div><span class="inline-flex items-center rounded-md border border-border px-2 py-0.5 text-[10px]">{model.architecture === 'dense' ? 'Dense' : model.architecture === 'moe' ? 'MoE' : model.kind}</span>{model.parameterCount && <span class="inline-flex items-center rounded-md border border-border px-2 py-0.5 text-[10px]">{model.parameterCount}{model.activeParameterCount && ` / ${model.activeParameterCount}`}</span>}<span class="text-[10px] text-muted-foreground ml-auto shrink-0 tabular-nums">{model.category}</span><span class="text-muted-foreground/40 group-hover:text-vllm-blue group-hover:translate-x-0.5 transition-all">→</span></a>)}
+</div>
