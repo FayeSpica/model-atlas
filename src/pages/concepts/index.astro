@@ -1,0 +1,4 @@
+---
+import Layout from '../../layouts/Layout.astro';import {concepts} from '../../data/catalog.mjs';const base=import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<Layout title="基础概念"><section class="concept-index"><p class="eyebrow">基础概念</p><h1>先理解机制，再读模型。</h1><p class="intro">让同一个知识点，在不同结构中连起来。</p><div class="concept-links">{concepts.map(c=><a href={`${base}concepts/${c.id}/`}><strong>{c.name}</strong><span>{c.intro}</span><b>↗</b></a>)}</div></section></Layout>

@@ -1,0 +1,4 @@
+import {readdir,readFile,stat} from 'node:fs/promises';import {resolve,join} from 'node:path';
+const root=resolve('dist');let count=0;const errors=[];
+async function walk(dir){for(const entry of await readdir(dir,{withFileTypes:true})){const file=join(dir,entry.name);if(entry.isDirectory())await walk(file);else if(file.endsWith('.html')){count++;const body=await readFile(file,'utf8');for(const [,url] of body.matchAll(/(?:href|src)="([^"]+)"/g)){if(url.startsWith('/')&&!url.startsWith('/model-atlas/')){errors.push(`${file}: invalid base path ${url}`);continue;}if(!url.startsWith('/model-atlas/'))continue;let target=join(root,decodeURI(url.slice('/model-atlas/'.length).split(/[?#]/)[0]));try{if((await stat(target)).isDirectory())target=join(target,'index.html');await stat(target);}catch{errors.push(`${file}: ${url}`);}}}}}
+await walk(root);if(errors.length)throw new Error(errors.join('\n'));console.log(`PASS: local links and assets in ${count} generated HTML pages`);

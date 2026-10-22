@@ -1,0 +1,26 @@
+---
+const {model}=Astro.props;
+---
+<section class="flow-player" aria-label="交互数据流" data-steps={JSON.stringify(model.nodes)}>
+<div class="flow-head"><span>一次生成的数据流</span><span class="subtle">点击节点，查看张量与解释</span></div>
+<svg class="flow-svg" viewBox="0 0 1000 168" role="group" aria-label={`${model.name} 数据流`}>
+<defs><marker id="flow-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8" fill="#938d86"/></marker></defs>
+{model.nodes.map((node,i)=><g><g class="flow-node" data-index={i} tabindex="0" role="button" aria-label={`第 ${i+1} 步：${node[0]}`} aria-pressed={i===0?'true':'false'}><rect x={10+i*200} y="30" width="180" height="105" class={`tone-${i%3}`}/><text x={100+i*200} y="59" text-anchor="middle" class="flow-number">{String(i+1).padStart(2,'0')}</text><text x={100+i*200} y="87" text-anchor="middle" class="flow-title">{node[0]}</text><text x={100+i*200} y="111" text-anchor="middle" class="flow-small">{node[1].split(' → ')[0]}</text></g>{i<4&&<path d={`M${190+i*200} 82H${204+i*200}`} stroke="#938d86" marker-end="url(#flow-arrow)"/>}</g>)}
+</svg>
+<div class="flow-mobile">{model.nodes.map((node,i)=><button class="flow-node" data-index={i} aria-pressed={i===0?'true':'false'}><span>{i+1}</span>{node[0]}</button>)}</div>
+<div class="player-controls"><button type="button" data-prev aria-label="上一步">←</button><button type="button" data-play>播放流程</button><button type="button" data-next aria-label="下一步">→</button><span data-count>1 / 5</span><div class="segments">{model.nodes.map((_,i)=><button type="button" data-segment={i} aria-label={`转到第 ${i+1} 步`} class={i===0?'active':''}></button>)}</div></div>
+<div class="step-detail" aria-live="polite"><div><span class="subtle" data-step>步骤 01</span><h3 data-title>{model.nodes[0][0]}</h3><code data-shape>{model.nodes[0][2]}</code></div><p data-body>{model.nodes[0][3]}</p></div>
+</section>
+<script>
+ document.querySelectorAll<HTMLElement>('.flow-player').forEach(player=>{
+ const steps=JSON.parse(player.dataset.steps!);let index=0;let timer:ReturnType<typeof setInterval>|undefined;
+ const nodes=player.querySelectorAll<SVGGElement>('.flow-node');const segments=player.querySelectorAll<HTMLButtonElement>('[data-segment]');
+ function render(){nodes.forEach((n,i)=>n.setAttribute('aria-pressed',String(Number(n.dataset.index)===index)));segments.forEach((n,i)=>n.classList.toggle('active',i===index));player.querySelector('[data-title]')!.textContent=steps[index][0];player.querySelector('[data-shape]')!.textContent=steps[index][2];player.querySelector('[data-body]')!.textContent=steps[index][3];player.querySelector('[data-count]')!.textContent=`${index+1} / ${steps.length}`;player.querySelector('[data-step]')!.textContent=`步骤 ${String(index+1).padStart(2,'0')}`;}
+ function stop(){clearInterval(timer);timer=undefined;player.querySelector('[data-play]')!.textContent='播放流程';}
+ function go(i:number){stop();index=(i+steps.length)%steps.length;render();}
+ nodes.forEach((node)=>{const i=Number(node.dataset.index);node.addEventListener('click',()=>go(i));node.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go(i);}})});segments.forEach((n,i)=>n.addEventListener('click',()=>go(i)));
+ player.querySelector('[data-prev]')!.addEventListener('click',()=>go(index-1));player.querySelector('[data-next]')!.addEventListener('click',()=>go(index+1));
+ player.querySelector('[data-play]')!.addEventListener('click',()=>{if(timer){stop();return;}player.querySelector('[data-play]')!.textContent='暂停';timer=setInterval(()=>{if(index===steps.length-1){stop();return;}index++;render();},3500)});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});
+ });
+</script>

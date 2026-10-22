@@ -1,0 +1,10 @@
+---
+import '../styles/global.css';
+const {title='Model Atlas',description='看图理解模型，沿源码深入。'}=Astro.props;
+const base=import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><title>{title} · Model Atlas</title><link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml"/></head><body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="topbar"><a class="brand" href={base}><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M3 24V6h8v18M11 15h8M19 24V6h8v18" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="15" cy="15" r="3" fill="#b5873a"/></svg>Model Atlas</a><nav aria-label="主导航"><a href={`${base}#models`}>模型图谱</a><a href={`${base}concepts/`}>基础概念</a><a href="https://github.com/FayeSpica/model-atlas">GitHub ↗</a></nav></header>
+<main id="main"><slot/></main><footer><span>Model Atlas · 模型结构图谱</span><span>以图理解 · 以源码核对</span><a href="https://github.com/FayeSpica/model-atlas/blob/main/CONTRIBUTING.md">贡献一篇模型拆解 ↗</a></footer>
+</body></html>

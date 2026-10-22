@@ -1,0 +1,4 @@
+---
+import Layout from '../../layouts/Layout.astro';import {concepts,models} from '../../data/catalog.mjs';export function getStaticPaths(){return concepts.map(concept=>({params:{slug:concept.id},props:{concept}}));}const {concept:c}=Astro.props;const base=import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<Layout title={c.name}><article class="concept-article"><a class="breadcrumb" href={`${base}concepts/`}>基础概念</a><h1>{c.name}</h1><p class="intro">{c.intro}</p><div class="formula"><code>{c.formula}</code></div><p>{c.body}</p><section class="exercise"><h2>{c.question}</h2><details><summary>展开参考答案</summary><p>{c.answer}</p></details></section><h2>在哪些模型里读到它？</h2><div class="related-models">{models.filter(m=>m.concepts.includes(c.id)).map(m=><a href={`${base}models/${m.slug}/`}><strong>{m.name}</strong><span>{m.lead}</span></a>)}</div><p class="subtle">此页为入门解释。具体公式变体、张量布局与实现范围，见各模型页的来源。</p></article></Layout>
